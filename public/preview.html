@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariq Fish - Pusat Pengadaan & Perdagangan Hasil Laut Terbesar Se-Asia (Sejak 1950)</title>
+  <meta name="description" content="Perusahaan jual beli ikan terbesar se-Asia yang dibangun oleh keluarga Ariq pada tahun 1950. Rantai pasok dingin (cold chain) standar internasional." />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN for instant zero-dependency local preview -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#fef8f4",
+            "on-background": "#1d1b19",
+            surface: "#fef8f4",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f8f2ee",
+            "surface-container": "#f3ede9",
+            "surface-container-high": "#ede7e3",
+            primary: {
+              DEFAULT: "#00507d",
+              hover: "#0284c7",
+              container: "#0369a1",
+            },
+            secondary: {
+              DEFAULT: "#6e5a52",
+              container: "#f5dad0",
+            },
+            tertiary: {
+              DEFAULT: "#634706",
+              gold: "#c5a059",
+              container: "#7e5f1f",
+            }
+          },
+          fontFamily: {
+            display: ["Playfair Display", "Georgia", "serif"],
+            body: ["Inter", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fef8f4;
+      color: #1d1b19;
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    section[id] {
+      scroll-margin-top: 5.5rem;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fef8f4]/95 backdrop-blur-md border-b border-[#ede7e3] shadow-[0_1px_8px_rgba(45,30,24,0.05)]">
+    <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded bg-[#00507d] flex items-center justify-center text-white shadow-sm">
+          <span class="material-symbols-outlined text-2xl">anchor</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-semibold text-xl text-[#1d1b19] leading-tight">Ariq Fish</span>
+          <span class="text-[10px] font-semibold text-[#6e5a52] uppercase tracking-widest hidden sm:block">Sejak 1950 • Hasil Laut Terbesar Se-Asia</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#40474f]">
+        <a href="#beranda" class="hover:text-[#00507d] transition-colors">Beranda</a>
+        <a href="#tentang-kami" class="hover:text-[#00507d] transition-colors">Tentang Kami</a>
+        <a href="#layanan" class="hover:text-[#00507d] transition-colors">Layanan</a>
+        <a href="#warta" class="hover:text-[#00507d] transition-colors">Warta Pasar</a>
+        <a href="#kontak" class="hover:text-[#00507d] transition-colors">Kontak & Lokasi</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#kontak" class="text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded bg-[#00507d] hover:bg-[#0369a1] text-white transition-all shadow-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-base">support_agent</span>
+          <span>Hubungi Penjualan</span>
+        </a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2 rounded text-[#1d1b19]" aria-label="Toggle menu">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#fef8f4] border-b border-[#ede7e3] px-6 py-4 space-y-3">
+      <a href="#beranda" class="block text-base font-medium text-[#1d1b19] py-1">Beranda</a>
+      <a href="#tentang-kami" class="block text-base font-medium text-[#1d1b19] py-1">Tentang Kami</a>
+      <a href="#layanan" class="block text-base font-medium text-[#1d1b19] py-1">Layanan</a>
+      <a href="#warta" class="block text-base font-medium text-[#1d1b19] py-1">Warta Pasar</a>
+      <a href="#kontak" class="block text-base font-medium text-[#1d1b19] py-1">Kontak & Lokasi</a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-grow">
+    <!-- HERO -->
+    <section id="beranda" class="relative w-full pt-32 pb-20 overflow-hidden bg-[#fef8f4] border-b border-[#ede7e3]">
+      <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#00507d] text-white text-xs font-semibold tracking-wider uppercase shadow-sm">
+            <span class="material-symbols-outlined text-sm text-[#94ccff]">set_meal</span>
+            JUAL BELI IKAN TERBESAR SE-ASIA • SEJAK 1950
+          </span>
+          <div class="h-[1px] w-12 bg-[#c0c7d1] hidden sm:block"></div>
+          <span class="text-xs font-medium text-[#6e5a52] hidden sm:inline-block">Izin KKP No. 4481/FISH-ID</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div class="lg:col-span-6 flex flex-col space-y-6">
+            <h1 class="font-display font-semibold text-3xl sm:text-4xl lg:text-[42px] text-[#1d1b19] leading-[1.2] tracking-tight">
+              Mitra Utama Pengadaan & Perdagangan Ikan Laut Berkualitas Se-Asia
+            </h1>
+            <p className="text-base sm:text-lg text-[#40474f] leading-relaxed max-w-xl">
+              Didirikan oleh keluarga Ariq pada tahun 1950, menghubungkan tangkapan segar ribuan nelayan Nusantara ke pasar industri pengolahan, jaringan restoran premium, serta kargo ekspor dengan teknologi cold chain standar internasional.
+            </p>
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="#kontak" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#00507d] text-white font-semibold text-sm hover:bg-[#0369a1] transition-all shadow-md group">
+                <span>Penawaran Jual / Pasok Ikan</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <a href="#layanan" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#ede7e3] text-[#1d1b19] font-semibold text-sm hover:bg-[#e7e1dd] transition-colors shadow-sm">
+                <span class="material-symbols-outlined text-base text-[#6e5a52]">inventory_2</span>
+                <span>Katalog Layanan & Komoditas</span>
+              </a>
+            </div>
+            <div class="pt-4 grid grid-cols-3 gap-3">
+              <div class="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm">
+                <span class="block font-display font-bold text-2xl text-[#00507d]">50+ Ton</span>
+                <span class="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">Kapasitas / Hari</span>
+              </div>
+              <div class="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm">
+                <span class="block font-display font-bold text-2xl text-[#00507d]">12+ Pelabuhan</span>
+                <span class="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">Sentra Tangkapan</span>
+              </div>
+              <div class="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm">
+                <span class="block font-display font-bold text-2xl text-[#00507d]">99.8%</span>
+                <span class="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">Kesegaran Terjaga</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 relative">
+            <div class="relative p-2.5 rounded-lg bg-white border border-[#ede7e3] shadow-xl">
+              <div class="relative h-[400px] sm:h-[460px] w-full overflow-hidden rounded bg-[#dfd9d5]">
+                <img 
+                  src="images/hero-fish-platter.png" 
+                  onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuB1wDiClB1ao_riIPkaFXmnO3UkH3GXP4XnODf-eCUIvshKbkshH70l6wo2lECQzc_W1P88zKDPS7uCNgziReuvOfyGZNYrHz1NDivxY1frWRynRuhj_6kYstIC6sWHZ_envBgfELh_Rd7ZQsDj5IHV2xVgYTtZGE2VUpt8jOGi3tdu5PC89k8RzyNLu4UsjTQhhS555QbtA0SphlFCGwuzTQP8sBCK90svnTjqNho';"
+                  alt="Komoditas Ikan Laut Segar Ariq Fish" 
+                  class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1d1b19]/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 p-4 rounded bg-white/95 backdrop-blur-md border border-[#ede7e3] shadow-lg flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded bg-[#7e5f1f] text-white flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-2xl text-[#ffdda1]">ac_unit</span>
+                    </div>
+                    <div>
+                      <h2 class="font-display font-semibold text-sm sm:text-base text-[#1d1b19]">Ariq Fish Cold Chain Hub</h2>
+                      <p class="text-xs text-[#6e5a52]">Standar HACCP & SKP Kementerian Kelautan</p>
+                    </div>
+                  </div>
+                  <div class="hidden sm:flex flex-col text-right">
+                    <span class="text-xs font-bold text-[#00507d] uppercase tracking-wider">Grade Ekspor</span>
+                    <span class="text-[11px] text-[#40474f]">PIK 2 Hub Jakarta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="tentang-kami" class="w-full py-20 bg-[#f8f2ee] border-b border-[#ede7e3]">
+      <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-widest font-semibold text-[#00507d] mb-1">Tentang Ariq Fish</span>
+          <h2 class="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1d1b19]">
+            Dedikasi Tiga Generasi Sejak 1950 Menghadirkan Ikan Laut Terbaik
+          </h2>
+          <div class="w-12 h-1 bg-[#c5a059] mt-3 mb-4 rounded-full"></div>
+          <p class="text-sm sm:text-base text-[#40474f] leading-relaxed">
+            Menyerap hasil tangkapan nelayan pesisir Nusantara dengan harga yang adil, menjaga mutu kesegaran melalui fasilitas modern, dan menyuplai kebutuhan pasar nasional hingga ekspor.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16">
+          <div class="lg:col-span-7 space-y-5">
+            <div class="p-6 sm:p-8 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+              <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#7e5f1f] bg-[#f8ddd3] px-2.5 py-1 rounded mb-3">
+                Warisan Keluarga Ariq (Established 1950)
+              </span>
+              <h3 class="font-display font-semibold text-xl sm:text-2xl text-[#1d1b19] mb-4">
+                Komitmen Nyata Membeli & Mendistribusikan Ikan Laut Bermutu Tinggi
+              </h3>
+              <p class="text-sm sm:text-base text-[#40474f] leading-relaxed mb-4">
+                Didirikan pertama kali oleh keluarga Ariq pada tahun 1950, kini Ariq Fish telah bertransformasi menjadi salah satu jaringan perdagangan dan rantai pasok hasil laut terbesar se-Asia. Kami bermitra langsung dengan ribuan kapal nelayan di lebih dari 12 sentra pelabuhan tangkapan strategis Nusantara.
+              </p>
+              <blockquote class="p-4 sm:p-5 rounded bg-[#f3ede9] border-l-4 border-[#00507d] text-[#1d1b19]">
+                <p class="text-sm sm:text-base italic text-[#6e5a52]">
+                  “Kunci utama hasil laut bukan sekadar volume tangkapan, melainkan kecepatan rantai dingin dan keadilan harga bagi nelayan pejuang bahari.”
+                </p>
+                <div class="mt-2 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#00507d]"></span>
+                  <span class="text-xs font-bold text-[#1d1b19]">Manajemen Kemitraan Keluarga Ariq Fish</span>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-lg overflow-hidden bg-white border border-[#ede7e3] shadow-sm">
+              <img 
+                src="images/about-fishermen.png" 
+                onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuD7nMyqGf-vvJ7HCx_Z9qQu65o-qMs_uVmcGnW-2qYeFiQ8BFSqc4E4Heap7OMpTHoeB0qBUmWgx9VMbda3YjYW2lGWwKtXhxSzSpolgGH8ksZIBiOMzfaTm5-X0BoxOQfNf3-biaRAN2Wwwd9rhJgOimvcuflk9nyGkFEmMsMILiXYJ1RdbGkuRWRd6be3JfIcAPA3rX-EGfK3hzBCEiDOC9UGRgZtIORjpRWulSQ';"
+                alt="Nelayan Tradisional Nusantara" 
+                class="w-full h-64 sm:h-72 object-cover">
+              <div class="p-5">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs uppercase font-bold text-[#00507d] tracking-wider">Jaminan Mutu & Kemitraan</span>
+                  <span class="material-symbols-outlined text-[#c5a059]">verified</span>
+                </div>
+                <p class="text-xs text-[#40474f]">
+                  Pengadaan langsung di dermaga pendaratan ikan dengan seleksi kualitas ketat dan sertifikasi kelayakan resmi KKP RI.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+            <div class="w-12 h-12 rounded bg-[#00507d] text-white flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">handshake</span>
+            </div>
+            <h4 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Kemitraan Adil Nelayan</h4>
+            <p class="text-xs sm:text-sm text-[#40474f]">Sistem pembelian tunai dan harga lelang kompetitif yang menyejahterakan ribuan nelayan lokal.</p>
+          </div>
+          <div class="p-6 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+            <div class="w-12 h-12 rounded bg-[#7e5f1f] text-white flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl text-[#ffdda1]">ac_unit</span>
+            </div>
+            <h4 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Cold Storage Higienis</h4>
+            <p class="text-xs sm:text-sm text-[#40474f]">Fasilitas pendingin bersuhu hingga -25°C untuk menjaga mutu Grade A tanpa bahan kimia berbahaya.</p>
+          </div>
+          <div class="p-6 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+            <div class="w-12 h-12 rounded bg-[#f5dad0] text-[#735e56] flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl text-[#00507d]">local_shipping</span>
+            </div>
+            <h4 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Distribusi & Pasokan Cepat</h4>
+            <p class="text-xs sm:text-sm text-[#40474f]">Armada truk reefer berpendingin melayani pasokan harian pabrik, hotel, resto, dan ekspor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="layanan" class="w-full py-20 bg-[#fef8f4] border-b border-[#ede7e3]">
+      <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-widest font-semibold text-[#00507d] mb-1">Layanan & Solusi Pasokan</span>
+          <h2 class="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1d1b19]">
+            Layanan Komoditas & Rantai Pasok Ariq Fish
+          </h2>
+          <div class="w-12 h-1 bg-[#c5a059] mt-3 mb-4 rounded-full"></div>
+          <p class="text-sm sm:text-base text-[#40474f]">
+            Solusi menyeluruh penyerapan ikan tangkapan dermaga, pengolahan higienis, hingga pengiriman tepat waktu ke gudang Anda.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div class="p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">sailing</span>
+                </span>
+                <span class="text-xs font-semibold text-[#6e5a52] uppercase bg-[#f8f2ee] px-2 py-0.5 rounded">Layanan 01</span>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Pembelian Ikan Tangkapan Segar</h3>
+              <p class="text-xs sm:text-sm text-[#40474f]">Direct sourcing dari kapal nelayan di pelabuhan pendaratan dengan timbangan presisi dan pembayaran kontan.</p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-[#ede7e3]/60">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1">
+                <span>Pelajari Kemitraan</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">warehouse</span>
+                </span>
+                <span class="text-xs font-semibold text-[#6e5a52] uppercase bg-[#f8f2ee] px-2 py-0.5 rounded">Layanan 02</span>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Pengadaan Ikan Beku Skala Industri</h3>
+              <p class="text-xs sm:text-sm text-[#40474f]">Suplai rutin tonase besar untuk Tuna, Cakalang, Tongkol, Kakap Merah, Kembung, Lemuru, dan Cumi.</p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-[#ede7e3]/60">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1">
+                <span>Katalog Komoditas</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">ac_unit</span>
+                </span>
+                <span class="text-xs font-semibold text-[#6e5a52] uppercase bg-[#f8f2ee] px-2 py-0.5 rounded">Layanan 03</span>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Rantai Dingin & Cold Storage</h3>
+              <p class="text-xs sm:text-sm text-[#40474f]">Penyewaan kapasitas ruang beku dan manajemen cold storage bersuhu hingga -25°C dengan sensor digital.</p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-[#ede7e3]/60">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1">
+                <span>Fasilitas Gudang Beku</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">restaurant</span>
+                </span>
+                <span class="text-xs font-semibold text-[#6e5a52] uppercase bg-[#f8f2ee] px-2 py-0.5 rounded">Layanan 04</span>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Suplai Restoran & Hotel (Horeka)</h3>
+              <p class="text-xs sm:text-sm text-[#40474f]">Pengiriman harian terjadwal ikan segar bersih dan portion cut untuk restoran seafood, hotel, & katering.</p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-[#ede7e3]/60">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1">
+                <span>Paket Pasokan Horeka</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">content_cut</span>
+                </span>
+                <span class="text-xs font-semibold text-[#6e5a52] uppercase bg-[#f8f2ee] px-2 py-0.5 rounded">Layanan 05</span>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Pemrosesan & Fillet Higienis</h3>
+              <p class="text-xs sm:text-sm text-[#40474f]">Pembersihan insang, penyiangan isi perut (gutting), fillet loin, dan vacuum pack kedap udara food safety.</p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-[#ede7e3]/60">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1">
+                <span>Standar Pemrosesan</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center">
+                  <span class="material-symbols-outlined text-2xl">public</span>
+                </span>
+                <span class="text-xs font-semibold text-[#6e5a52] uppercase bg-[#f8f2ee] px-2 py-0.5 rounded">Layanan 06</span>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-[#1d1b19] mb-2">Ekspor Hasil Laut & Karantina</h3>
+              <p class="text-xs sm:text-sm text-[#40474f]">Pengurusan dokumen karantina ikan (Health Certificate), izin ekspor CITES/HACCP, dan kontainer kargo.</p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-[#ede7e3]/60">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1">
+                <span>Konsultasi Ekspor</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="warta" class="w-full py-20 bg-[#f8f2ee] border-b border-[#ede7e3]">
+      <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-semibold text-[#00507d] mb-1 block">Info Pasar & Industri Bahari</span>
+            <h2 class="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1d1b19]">
+              Warta Tangkapan & Pasar Ikan Terkini
+            </h2>
+            <div class="w-12 h-1 bg-[#c5a059] mt-3 rounded-full"></div>
+          </div>
+          <p class="text-xs sm:text-sm text-[#40474f] max-w-md">
+            Informasi berkala mengenai dinamika harga lelang dermaga, tren permintaan ikan ekspor, serta inovasi cold chain.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <article class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-sm flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 bg-[#00507d] overflow-hidden">
+                <img 
+                  src="images/news-1.png" 
+                  onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuC74QdXM_SRbFOv2oZazxCw1nQRE5s0qYUfDvBekNFtC2u6Kqm5wbQciyblR8Dp0zo_qaqsvag2EHtQYoNzsDRonNgQppZtAPgVGeaAqYe_Dw_LkcCiFxOG4uqtQrXQMjIcmWmtpzEK70PUydAR8MUo67gEH_hFayblfYapB9MPueyVsnicaUBnNJakOO2VXO_nZ5k1W5jGf-EN2kSXx-OzvDUZLWoo9JGj1efwDUc';"
+                  alt="Dermaga Pelabuhan Pendaratan Ikan" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-black/40 text-white text-[11px] font-semibold uppercase backdrop-blur-sm">Dinamika Lelang</span>
+                  <span class="text-xs text-white/90 font-mono bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">12 Mei 2026</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-semibold text-base sm:text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
+                  Kenaikan Permintaan Ikan Cakalang &amp; Tongkol di Sentra Pesisir Jawa
+                </h3>
+                <p class="text-xs sm:text-sm text-[#40474f] line-clamp-3 leading-relaxed">
+                  Analisis stabilitas pasokan tangkapan nelayan pesisir utara dan kesiapan fasilitas serap beku Ariq Fish menghadapi fluktuasi cuaca laut.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline">
+                <span>Baca Selengkapnya</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-sm flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 bg-[#00507d] overflow-hidden">
+                <img 
+                  src="images/news-2.png" 
+                  onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAgZoCoX5cmOr0ePqxi0oYAyBBUbUqdaGcKXDn4E7QZtZ2UVoAEQ5jhtYsHqdmj9J2BJidKE-_QO1QUkOCTnmquu5HXleDSQipPPBPl9JxVEcS3bp6QtbmFvX6t-IlRR6NFG4E5sDbNnBxz2oIpZcvA9Xgd4C6x5QA9H9lkiQ2fgZgbxiRdV9wkfNfU5PzfrckKWj7VU6sa63B5k8DH2zqvqWZ1jmTi6LS38OWyYss';"
+                  alt="Teknologi Rantai Dingin Cold Storage" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-black/40 text-white text-[11px] font-semibold uppercase backdrop-blur-sm">Standar Mutu</span>
+                  <span class="text-xs text-white/90 font-mono bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">28 April 2026</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-semibold text-base sm:text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
+                  Pentingnya Air Blast Freezing dalam Mempertahankan Kualitas Ikan Tuna
+                </h3>
+                <p class="text-xs sm:text-sm text-[#40474f] line-clamp-3 leading-relaxed">
+                  Kajian teknis pembekuan ultra-cepat untuk mencegah kerusakan jaringan seluler daging ikan agar tetap layak sashimi grade saat dipasarkan.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline">
+                <span>Baca Selengkapnya</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-sm flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 bg-[#00507d] overflow-hidden">
+                <img 
+                  src="images/news-3.png" 
+                  onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCdBR9t4l3ayfH1cmemF52EPq25rXB2EEJ7hNDzLmcpT1ihWDBeRF2N00SNJ4Fm0rYQTwBvwqerdiHIJo8WIVnTgZ_ZMD53ztLG4FXXPfFckOnyNO1wjjksYR45LJlJVj5wl2zhz_nDZNvoycTgDJCT-jWyX_VMvtD8UKK9suUcI889yo3FMNLLy_qK0I0Z-pGU0H26BfMRZg7IzKrSlvJnQM_Uz7tEkAgUEhtxlb4';"
+                  alt="Pengiriman Hasil Laut Pelabuhan" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded bg-black/40 text-white text-[11px] font-semibold uppercase backdrop-blur-sm">Ekspansi Pasar</span>
+                  <span class="text-xs text-white/90 font-mono bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">15 April 2026</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display font-semibold text-base sm:text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
+                  Ariq Fish Perluas Distribusi Pasokan Segar ke 50+ Jaringan Restoran
+                </h3>
+                <p class="text-xs sm:text-sm text-[#40474f] line-clamp-3 leading-relaxed">
+                  Layanan daily supply menjamin kontinuitas bahan baku hasil laut bebas formalin dengan grading ukuran seragam dan harga kompetitif.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-0">
+              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline">
+                <span>Baca Selengkapnya</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + GOOGLE MAPS -->
+    <section id="kontak" class="w-full py-20 bg-[#fef8f4] border-b border-[#ede7e3]">
+      <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-widest font-semibold text-[#00507d] mb-1">Pusat Kemitraan & Transaksi</span>
+          <h2 class="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1d1b19]">
+            Hubungi Tim Perdagangan Ariq Fish
+          </h2>
+          <div class="w-12 h-1 bg-[#c5a059] mt-3 mb-4 rounded-full"></div>
+          <p class="text-sm sm:text-base text-[#40474f]">
+            Tawarkan hasil tangkapan laut kapal Anda, konsultasikan kebutuhan rutin horeka/industri, atau diskusikan kontrak pengadaan ikan skala besar bersama tim kami.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <!-- Left Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="p-6 sm:p-8 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pb-6 border-b border-[#ede7e3]">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#00507d] text-2xl mt-0.5">pin_drop</span>
+                  <div>
+                    <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Kantor Pemasaran Utama</span>
+                    <p class="text-xs sm:text-sm text-[#1d1b19] font-medium leading-snug mt-0.5">
+                      Kantor Pemasaran Utama (Marketing Gallery) PIK 2, Jl. Marina Indah Raya No. 1, RT.7/RW.2, Kamal Muara, Kecamatan Penjaringan, Jakarta Utara, 14470
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#00507d] text-2xl mt-0.5">call</span>
+                  <div>
+                    <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Telepon / WhatsApp</span>
+                    <a href="https://wa.me/6285156256177" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm text-[#00507d] font-bold hover:underline block mt-0.5">
+                      085156256177
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#00507d] text-2xl mt-0.5">mail</span>
+                  <div>
+                    <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Surel Resmi</span>
+                    <a href="mailto:ariqfathi@gmail.com" class="text-xs sm:text-sm text-[#00507d] font-medium hover:underline block mt-0.5">
+                      ariqfathi@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#00507d] text-2xl mt-0.5">schedule</span>
+                  <div>
+                    <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Jam Layanan</span>
+                    <p class="text-xs sm:text-sm text-[#1d1b19] font-medium leading-snug mt-0.5">
+                      Senin - Jumat: 08:30 - 17:00 WIB
+                    </p>
+                    <span class="text-[11px] text-[#6e5a52]">Sabtu: Dengan Janji Temu</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form -->
+              <form id="contactForm" class="pt-6 space-y-4">
+                <h3 class="font-display font-semibold text-lg text-[#1d1b19]">Kirim Permintaan Pasokan atau Penawaran</h3>
+                <div id="formSuccess" class="hidden p-4 rounded bg-[#e0f2fe] border border-[#94ccff] text-[#00507d] text-xs sm:text-sm flex items-center gap-2">
+                  <span class="material-symbols-outlined text-xl">check_circle</span>
+                  <span>Terima kasih! Pesan dan penawaran Anda telah berhasil dikirim ke tim perdagangan Ariq Fish.</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Nama Lengkap / Kontak</label>
+                    <input type="text" required placeholder="Contoh: Hendra Wijaya" class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Alamat Email</label>
+                    <input type="email" required placeholder="nama@perusahaan.com" class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Badan Usaha / Resto / Kapal</label>
+                    <input type="text" placeholder="Contoh: Resto Seafood Nusantara" class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Jenis Keperluan</label>
+                    <select class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+                      <option>Permintaan Pasokan Ikan Segar / Beku</option>
+                      <option>Penawaran Jual Hasil Tangkapan Nelayan</option>
+                      <option>Sewa Cold Storage & Blast Freezing</option>
+                      <option>Konsultasi Ekspor & Karantina</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Rincian Volume, Komoditas & Jadwal</label>
+                  <textarea rows="4" required placeholder="Sebutkan jenis komoditas (misal: Cakalang beku 5 ton/minggu), lokasi kirim/serah terima, serta spesifikasi..." class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]"></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="w-full py-3.5 rounded bg-[#00507d] hover:bg-[#0369a1] text-white font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-base">send</span>
+                  <span>Kirim Permintaan Pasokan / Penawaran Ikan</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Map Embed (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col space-y-4">
+            <div class="h-full rounded-lg bg-white border border-[#ede7e3] p-6 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[#00507d]">domain</span>
+                    <h3 class="font-display font-semibold text-lg text-[#1d1b19]">Marketing Gallery PIK 2</h3>
+                  </div>
+                  <span class="px-2.5 py-0.5 rounded bg-[#f5dad0] text-[#735e56] text-[11px] font-semibold uppercase">Kantor Pusat</span>
+                </div>
+                <p class="text-xs text-[#40474f] leading-relaxed mb-4">
+                  Terletak strategis di kawasan PIK 2, akses tol langsung dan dekat fasilitas pelabuhan perikanan Jakarta Utara.
+                </p>
+              </div>
+
+              <!-- Google Maps Iframe -->
+              <div class="w-full min-h-[320px] rounded overflow-hidden border border-[#ede7e3] relative shadow-inner bg-[#f8f2ee]">
+                <iframe
+                  title="Peta Lokasi Kantor Pemasaran Utama Ariq Fish PIK 2"
+                  src="https://maps.google.com/maps?q=Marketing+Gallery+PIK+2+Jl.+Marina+Indah+Raya+No.+1+Kamal+Muara+Jakarta+Utara&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style="border:0; min-height: 320px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+
+              <div class="pt-4 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-bold text-[#00507d] uppercase tracking-wider block">Koordinat Bahari PIK 2</span>
+                  <span class="text-xs font-mono text-[#1d1b19]">6°04'58.2"S 106°44'21.1"E</span>
+                </div>
+                <a href="https://maps.google.com/?q=Marketing+Gallery+PIK+2+Jl.+Marina+Indah+Raya+No.+1+Kamal+Muara+Jakarta+Utara+14470" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded bg-[#00507d] hover:bg-[#0369a1] text-white text-xs font-semibold transition-all inline-flex items-center gap-1.5 shadow-sm">
+                  <span class="material-symbols-outlined text-sm">directions</span>
+                  <span>Buka Peta</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#ede7e3] border-t border-[#dfd9d5] text-[#1d1b19] pt-16 pb-12">
+    <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#dfd9d5]">
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded bg-[#00507d] flex items-center justify-center text-white shadow-sm">
+              <span class="material-symbols-outlined text-2xl">set_meal</span>
+            </div>
+            <div>
+              <span class="font-display font-semibold text-xl text-[#1d1b19] block leading-tight">Ariq Fish</span>
+              <span class="text-[11px] font-semibold text-[#6e5a52] uppercase tracking-widest">Perusahaan Jual Beli Ikan Terbesar Se-Asia</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-[#40474f] leading-relaxed max-w-sm">
+            Dibangun oleh keluarga Ariq pada tahun 1950. Berkomitmen menghadirkan rantai pasok ikan laut berkelanjutan, segar, dan berstandar internasional dari perairan Nusantara ke seluruh Asia.
+          </p>
+          <div class="flex items-center gap-2 pt-2">
+            <a href="https://wa.me/6285156256177" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white text-[#00507d] hover:bg-[#00507d] hover:text-white flex items-center justify-center transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-lg">chat</span>
+            </a>
+            <a href="mailto:ariqfathi@gmail.com" class="w-9 h-9 rounded bg-white text-[#00507d] hover:bg-[#00507d] hover:text-white flex items-center justify-center transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-lg">mail</span>
+            </a>
+            <a href="#kontak" class="w-9 h-9 rounded bg-white text-[#00507d] hover:bg-[#00507d] hover:text-white flex items-center justify-center transition-colors shadow-sm">
+              <span class="material-symbols-outlined text-lg">pin_drop</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-2.5">
+          <h4 class="text-xs font-bold text-[#1d1b19] uppercase tracking-wider mb-3">Komoditas & Layanan</h4>
+          <ul class="space-y-2 text-xs text-[#40474f]">
+            <li><a href="#layanan" class="hover:text-[#00507d]">Tuna Loin Grade A</a></li>
+            <li><a href="#layanan" class="hover:text-[#00507d]">Cakalang & Tongkol Beku</a></li>
+            <li><a href="#layanan" class="hover:text-[#00507d]">Kakap Merah & Kerapu</a></li>
+            <li><a href="#layanan" class="hover:text-[#00507d]">Sewa Cold Storage -25°C</a></li>
+            <li><a href="#layanan" class="hover:text-[#00507d]">Pasokan Horeka & Katering</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold text-[#1d1b19] uppercase tracking-wider mb-3">Legalitas & Sertifikasi</h4>
+          <div class="p-3.5 rounded bg-white border border-[#dfd9d5] shadow-sm space-y-1">
+            <span class="text-[11px] font-bold text-[#00507d] uppercase tracking-wider block">Standar Higienitas & SKP KKP</span>
+            <p class="text-xs text-[#40474f]">Rantai pasok dingin terverifikasi Balai Karantina Ikan dan Mutu Hasil Perikanan (BKIPM).</p>
+          </div>
+          <div class="text-[11px] text-[#6e5a52] font-mono space-y-0.5">
+            <p>NIB: 9120014820193 / KBLI Perikanan</p>
+            <p>Izin KKP No. 4481/FISH-ID</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#40474f] gap-4">
+        <p>© 2026 Ariq Fish. Hak Cipta Dilindungi Undang-Undang.</p>
+        <div class="flex items-center gap-4 text-xs font-medium">
+          <a href="#beranda" class="hover:text-[#00507d]">Kembali ke Atas</a>
+          <span class="text-[#c0c7d1]">•</span>
+          <span class="text-[#6e5a52]">Heritage Editorial Edition</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PREVIEW SWITCHER FLOATING BAR -->
+  <div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-[#00507d] text-white px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border-2 border-white text-xs font-semibold">
+    <span class="text-[#cbe4ff] hidden sm:inline text-[11px] uppercase tracking-wider mr-1">Pratinjau Layar:</span>
+    <button id="view-landing-btn" class="px-3 py-1.5 rounded-full bg-white text-[#00507d] shadow-sm">
+      Landing Page
+    </button>
+    <button id="view-order-btn" class="px-3 py-1.5 rounded-full hover:bg-[#0369a1] text-white transition-colors">
+      Pesan &amp; QRIS (Step 3)
+    </button>
+    <button id="view-login-btn" class="px-3 py-1.5 rounded-full hover:bg-[#0369a1] text-white transition-colors">
+      Login &amp; Auth
+    </button>
+    <button id="view-dashboard-btn" class="px-3 py-1.5 rounded-full hover:bg-[#0369a1] text-white transition-colors">
+      Dashboard Admin
+    </button>
+  </div>
+
+  <!-- MODAL PREVIEW LOGIN -->
+  <div id="modal-login-preview" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-md w-full p-8 shadow-2xl border border-[#ede7e3] relative animate-in fade-in">
+      <button id="close-login-btn" class="absolute top-4 right-4 text-[#707881] hover:text-[#1d1b19]">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded bg-[#00507d] flex items-center justify-center text-white mx-auto mb-3 shadow-sm">
+          <span class="material-symbols-outlined text-2xl">anchor</span>
+        </div>
+        <h3 class="font-display font-semibold text-2xl text-[#1d1b19]">Masuk ke Akun Anda</h3>
+        <p class="text-xs text-[#40474f] mt-1">Portal Akun &amp; Manajemen Ariq Fish</p>
+      </div>
+
+      <div class="mb-4 p-3 rounded bg-[#f8f2ee] border border-[#ede7e3] flex items-center justify-between text-xs">
+        <div>
+          <span class="font-bold text-[#00507d] block text-[11px]">Akun Admin Awal:</span>
+          <span class="font-mono text-[11px]">admin@gmail.com / 123456</span>
+        </div>
+        <button id="fill-demo-btn" class="px-2 py-1 rounded bg-[#00507d] text-white text-[10px] font-semibold">
+          Isi Cepat
+        </button>
+      </div>
+
+      <form id="previewLoginForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Alamat Email</label>
+          <input id="demo-email" type="email" required placeholder="admin@gmail.com" class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Password</label>
+          <input id="demo-password" type="password" required placeholder="••••••••" class="w-full px-3 py-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+        </div>
+        <button type="submit" class="w-full py-3 rounded bg-[#00507d] text-white font-semibold text-sm hover:bg-[#0369a1] shadow-md flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-base">login</span>
+          <span>Masuk ke Dashboard</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PREVIEW DASHBOARD -->
+  <div id="modal-dashboard-preview" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-2 sm:p-6">
+    <div class="bg-[#f8f2ee] rounded-xl max-w-5xl w-full h-[90vh] shadow-2xl border border-[#ede7e3] flex flex-col overflow-hidden animate-in fade-in">
+      <!-- Dashboard Top Header -->
+      <div class="h-16 bg-[#00507d] text-white px-6 flex items-center justify-between shrink-0 shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded bg-[#f5dad0] text-[#00507d] flex items-center justify-center">
+            <span class="material-symbols-outlined text-xl">anchor</span>
+          </div>
+          <div>
+            <span class="font-display font-semibold text-base block leading-tight">Ariq Fish Console</span>
+            <span class="text-[9px] uppercase tracking-wider text-[#cbe4ff]">Google Spreadsheet Sync v2.0</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-semibold text-[#cbe4ff] hidden sm:inline">admin@gmail.com</span>
+          <button id="close-dashboard-btn" class="p-1.5 rounded bg-white/20 hover:bg-white/30 text-white">
+            <span class="material-symbols-outlined text-xl">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dashboard Body Grid -->
+      <div class="flex-grow p-4 sm:p-6 overflow-y-auto space-y-5">
+        <!-- Security Alert -->
+        <div class="p-4 rounded-lg bg-[#fff8e1] border-l-4 border-[#c5a059] flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2 text-[#7e5f1f]">
+            <span class="material-symbols-outlined text-xl">warning</span>
+            <span><strong>Peringatan Keamanan:</strong> Ganti password admin awal sebelum website dipublikasikan ke production!</span>
+          </div>
+          <span class="px-2.5 py-1 rounded bg-[#7e5f1f] text-white font-semibold text-[10px]">Menu Profil</span>
+        </div>
+
+        <!-- 3 Stat Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+            <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Pengguna Terdaftar</span>
+            <span class="font-display font-bold text-2xl text-[#00507d] block mt-1">12 Akun</span>
+            <span class="text-[10px] text-[#15803d] font-semibold mt-1 block">● Database Spreadsheet Aktif</span>
+          </div>
+          <div class="p-5 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+            <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Artikel Warta</span>
+            <span class="font-display font-bold text-2xl text-[#00507d] block mt-1">3 Tayang</span>
+            <span class="text-[10px] text-[#00507d] font-semibold mt-1 block">Sinkronisasi Landing Page</span>
+          </div>
+          <div class="p-5 rounded-lg bg-white border border-[#ede7e3] shadow-sm">
+            <span class="text-xs font-semibold text-[#6e5a52] uppercase block">Penyimpanan Media</span>
+            <span class="font-display font-bold text-2xl text-[#00507d] block mt-1">public/uploads</span>
+            <span class="text-[10px] text-[#7e5f1f] font-semibold mt-1 block">Siap Migrasi Cloud Step 4</span>
+          </div>
+        </div>
+
+        <!-- CRUD News & Users Table Preview -->
+        <div class="bg-white rounded-lg border border-[#ede7e3] shadow-sm p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-semibold text-base text-[#1d1b19]">Daftar Berita Maritim (Sheet: News)</h4>
+            <span class="text-xs font-semibold px-3 py-1 rounded bg-[#00507d] text-white">+ Tambah Berita</span>
+          </div>
+          <div class="overflow-x-auto text-xs">
+            <table class="w-full text-left">
+              <thead class="bg-[#f8f2ee] text-[#6e5a52] uppercase text-[10px]">
+                <tr>
+                  <th class="p-2.5">Judul Artikel</th>
+                  <th class="p-2.5">Status</th>
+                  <th class="p-2.5">Tanggal</th>
+                  <th class="p-2.5 text-right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#ede7e3]">
+                <tr>
+                  <td class="p-2.5 font-medium">Kenaikan Permintaan Ikan Cakalang & Tongkol di Sentra Pesisir Jawa</td>
+                  <td class="p-2.5"><span class="px-2 py-0.5 rounded bg-[#dcfce7] text-[#15803d] font-semibold text-[10px]">Tayang</span></td>
+                  <td class="p-2.5 text-[#6e5a52]">12 Mei 2026</td>
+                  <td class="p-2.5 text-right space-x-1"><button class="px-2 py-0.5 bg-[#f8f2ee] rounded">Edit</button><button class="px-2 py-0.5 bg-[#ffdad6] text-[#93000a] rounded">Hapus</button></td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-medium">Pentingnya Air Blast Freezing dalam Mempertahankan Kualitas Ikan Tuna</td>
+                  <td class="p-2.5"><span class="px-2 py-0.5 rounded bg-[#dcfce7] text-[#15803d] font-semibold text-[10px]">Tayang</span></td>
+                  <td class="p-2.5 text-[#6e5a52]">28 Apr 2026</td>
+                  <td class="p-2.5 text-right space-x-1"><button class="px-2 py-0.5 bg-[#f8f2ee] rounded">Edit</button><button class="px-2 py-0.5 bg-[#ffdad6] text-[#93000a] rounded">Hapus</button></td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-medium">Ariq Fish Perluas Distribusi Pasokan Segar ke 50+ Jaringan Restoran</td>
+                  <td class="p-2.5"><span class="px-2 py-0.5 rounded bg-[#dcfce7] text-[#15803d] font-semibold text-[10px]">Tayang</span></td>
+                  <td class="p-2.5 text-[#6e5a52]">15 Apr 2026</td>
+                  <td class="p-2.5 text-right space-x-1"><button class="px-2 py-0.5 bg-[#f8f2ee] rounded">Edit</button><button class="px-2 py-0.5 bg-[#ffdad6] text-[#93000a] rounded">Hapus</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PREVIEW ORDER & QRIS PAYMENT (STEP 3) -->
+  <div id="modal-order-preview" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-2 sm:p-6 overflow-y-auto">
+    <div class="bg-[#f8f2ee] rounded-xl max-w-4xl w-full max-h-[92vh] shadow-2xl border border-[#ede7e3] flex flex-col overflow-hidden animate-in fade-in my-auto">
+      {/* Header */}
+      <div class="h-16 bg-[#00507d] text-white px-6 flex items-center justify-between shrink-0 shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded bg-[#f5dad0] text-[#00507d] flex items-center justify-center">
+            <span class="material-symbols-outlined text-xl">confirmation_number</span>
+          </div>
+          <div>
+            <span class="font-display font-semibold text-base block leading-tight">Tiket Pesanan #ord-849201</span>
+            <span class="text-[9px] uppercase tracking-wider text-[#cbe4ff]">Sistem Pembayaran QRIS Resmi Ariq Fish</span>
+          </div>
+        </div>
+        <button id="close-order-btn" class="p-1.5 rounded bg-white/20 hover:bg-white/30 text-white">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <div class="flex-grow p-4 sm:p-6 overflow-y-auto space-y-6">
+        {/* Status Callout */}
+        <div class="p-4 rounded-lg bg-[#dcfce7] border-l-4 border-[#15803d] flex items-start gap-3 text-xs">
+          <span class="material-symbols-outlined text-2xl text-[#15803d]">task_alt</span>
+          <div>
+            <h4 class="font-bold text-[#15803d]">Selamat, pembayaran Anda telah dikonfirmasi!</h4>
+            <p class="text-[#14532d] mt-0.5 leading-relaxed">
+              Silakan tunggu informasi selanjutnya dari admin melalui email/WhatsApp. Armada berpendingin kami akan mengirimkan pesanan Anda tepat waktu.
+            </p>
+          </div>
+        </div>
+
+        {/* QRIS & Order Breakdown Grid */}
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+          {/* QRIS Box (5 cols) */}
+          <div class="md:col-span-5 bg-white p-5 rounded-xl border border-[#ede7e3] text-center space-y-3 shadow-sm">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#00507d] block">
+              Scan Barcode QRIS Resmi
+            </span>
+            <div class="relative w-full max-w-[220px] mx-auto rounded-lg overflow-hidden border border-[#ede7e3]">
+              <img 
+                src="images/qris.jpg" 
+                alt="QRIS Merchant Ariq Fish" 
+                class="w-full h-auto object-contain">
+            </div>
+            <div class="p-3 rounded bg-[#f8f2ee] border border-[#ede7e3]">
+              <span class="text-[10px] text-[#6e5a52] uppercase block font-semibold">Total Tagihan:</span>
+              <span class="font-display font-bold text-xl text-[#00507d] font-mono">Rp 2.275.000</span>
+            </div>
+            <a 
+              href="https://wa.me/6285156256177?text=Halo%20Admin%20Ariq%20Fish,%20saya%20sudah%20membayar%20tiket%20pesanan%20ord-849201" 
+              target="_blank" 
+              class="w-full py-2.5 rounded bg-[#25d366] text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm">
+              <span class="material-symbols-outlined text-sm">chat</span>
+              <span>Hubungi Admin via WhatsApp</span>
+            </a>
+          </div>
+
+          {/* Details (7 cols) */}
+          <div class="md:col-span-7 bg-white p-5 rounded-xl border border-[#ede7e3] space-y-4 shadow-sm text-xs">
+            <h4 class="font-display font-semibold text-sm text-[#1d1b19] border-b pb-2">
+              Rincian Komoditas Ikan Dipesan:
+            </h4>
+            <div class="divide-y divide-[#ede7e3]">
+              <div class="py-2 flex justify-between">
+                <div>
+                  <span class="font-semibold block">Tuna Loin Grade A (Sashimi)</span>
+                  <span class="text-[#6e5a52] text-[11px]">15 kg × Rp 95.000</span>
+                </div>
+                <span class="font-mono font-bold text-[#00507d]">Rp 1.425.000</span>
+              </div>
+              <div class="py-2 flex justify-between">
+                <div>
+                  <span class="font-semibold block">Kakap Merah Tangkapan Karang</span>
+                  <span class="text-[#6e5a52] text-[11px]">10 kg × Rp 85.000</span>
+                </div>
+                <span class="font-mono font-bold text-[#00507d]">Rp 850.000</span>
+              </div>
+              <div class="pt-2 flex justify-between font-bold text-sm text-[#00507d]">
+                <span>Grand Total:</span>
+                <span class="font-mono">Rp 2.275.000</span>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#f8f2ee] rounded text-[11px] space-y-1">
+              <div><strong class="text-[#6e5a52]">Penerima:</strong> Resto Segar Bahari PIK</div>
+              <div><strong class="text-[#6e5a52]">No. WhatsApp:</strong> 081234567890</div>
+              <div><strong class="text-[#6e5a52]">Alamat:</strong> Ruko Cordoba Blok E No. 12, Pantai Indah Kapuk, Jakarta Utara</div>
+              <div><strong class="text-[#6e5a52]">Catatan:</strong> Pengiriman pagi hari jam 08:00 WIB via armada reefer.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Preview Switcher scripts
+    const loginModal = document.getElementById('modal-login-preview');
+    const dashboardModal = document.getElementById('modal-dashboard-preview');
+    const orderModal = document.getElementById('modal-order-preview');
+
+    document.getElementById('view-landing-btn')?.addEventListener('click', () => {
+      loginModal?.classList.add('hidden');
+      dashboardModal?.classList.add('hidden');
+      orderModal?.classList.add('hidden');
+    });
+
+    document.getElementById('view-order-btn')?.addEventListener('click', () => {
+      orderModal?.classList.remove('hidden');
+      loginModal?.classList.add('hidden');
+      dashboardModal?.classList.add('hidden');
+    });
+
+    document.getElementById('view-login-btn')?.addEventListener('click', () => {
+      loginModal?.classList.remove('hidden');
+      dashboardModal?.classList.add('hidden');
+      orderModal?.classList.add('hidden');
+    });
+
+    document.getElementById('view-dashboard-btn')?.addEventListener('click', () => {
+      dashboardModal?.classList.remove('hidden');
+      loginModal?.classList.add('hidden');
+      orderModal?.classList.add('hidden');
+    });
+
+    document.getElementById('close-login-btn')?.addEventListener('click', () => {
+      loginModal?.classList.add('hidden');
+    });
+
+    document.getElementById('close-dashboard-btn')?.addEventListener('click', () => {
+      dashboardModal?.classList.add('hidden');
+    });
+
+    document.getElementById('close-order-btn')?.addEventListener('click', () => {
+      orderModal?.classList.add('hidden');
+    });
+
+    document.getElementById('fill-demo-btn')?.addEventListener('click', () => {
+      document.getElementById('demo-email').value = 'admin@gmail.com';
+      document.getElementById('demo-password').value = '123456';
+    });
+
+    document.getElementById('previewLoginForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      loginModal?.classList.add('hidden');
+      dashboardModal?.classList.remove('hidden');
+    });
+
+    // Mobile navigation toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+
+    // Form submission
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const originalHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span><span>Mengirimkan Pesan...</span>';
+      submitBtn.disabled = true;
+      setTimeout(() => {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.disabled = false;
+        successMsg.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => successMsg.classList.add('hidden'), 5000);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+

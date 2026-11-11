@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed": "#261900",
+          "inverse-on-surface": "#f6f0ec",
+          "secondary-fixed": "#f8ddd3",
+          "outline": "#707881",
+          "tertiary-container": "#7e5f1f",
+          "on-tertiary": "#ffffff",
+          "on-secondary-fixed": "#271812",
+          "on-primary-container": "#cbe4ff",
+          "on-primary-fixed-variant": "#004b74",
+          "on-surface": "#1d1b19",
+          "on-secondary-container": "#735e56",
+          "surface-container-high": "#ede7e3",
+          "surface": "#fef8f4",
+          "on-tertiary-container": "#ffdda1",
+          "primary-fixed": "#cde5ff",
+          "surface-container-lowest": "#ffffff",
+          "secondary": "#6e5a52",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dfd9d5",
+          "surface-tint": "#006399",
+          "on-secondary-fixed-variant": "#55433c",
+          "error-container": "#ffdad6",
+          "on-primary-fixed": "#001d32",
+          "primary-container": "#0369a1",
+          "on-background": "#1d1b19",
+          "surface-variant": "#e7e1dd",
+          "secondary-fixed-dim": "#dbc1b7",
+          "surface-container-highest": "#e7e1dd",
+          "on-error-container": "#93000a",
+          "tertiary": "#634706",
+          "surface-container": "#f3ede9",
+          "error": "#ba1a1a",
+          "background": "#fef8f4",
+          "on-surface-variant": "#40474f",
+          "surface-bright": "#fef8f4",
+          "on-secondary": "#ffffff",
+          "secondary-container": "#f5dad0",
+          "outline-variant": "#c0c7d1",
+          "inverse-primary": "#94ccff",
+          "inverse-surface": "#32302e",
+          "primary-fixed-dim": "#94ccff",
+          "on-tertiary-fixed-variant": "#5d4201",
+          "primary": "#00507d",
+          "surface-container-low": "#f8f2ee",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#ffdea5",
+          "tertiary-fixed-dim": "#e9c176"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2.5rem",
+          "margin-desktop": "4rem",
+          "margin": "1.25rem",
+          "gutter-desktop": "2.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "display": ["Playfair Display"],
+          "label-sm": ["Inter"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "body-sm": ["Inter"],
+          "label-md": ["Inter"],
+          "headline-lg": ["Playfair Display"],
+          "display-mobile": ["Playfair Display"],
+          "headline-sm": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "body-lg": ["Inter"],
+          "body-md": ["Inter"]
+        },
+        "fontSize": {
+          "display": ["3.5rem", {"lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "label-sm": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "0em", "fontWeight": "600"}],
+          "body-sm": ["0.875rem", {"lineHeight": "1.25rem", "letterSpacing": "0.005em", "fontWeight": "400"}],
+          "label-md": ["0.875rem", {"lineHeight": "1.25rem", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "headline-lg": ["2.5rem", {"lineHeight": "3rem", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-mobile": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-sm": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-md": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "0em", "fontWeight": "500"}],
+          "body-lg": ["1.125rem", {"lineHeight": "1.75rem", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-md": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Buka Menu Navigasi" class="w-11 h-11 flex items-center justify-center text-secondary hover:text-on-surface transition-colors rounded-lg"><span class="material-symbols-outlined text-2xl">menu</span></button><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-2xl">set_meal</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold leading-none">Ariq Fish</span><span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase text-[10px] leading-tight">Hasil Laut Nusantara</span></div></div></div><div class="flex items-center gap-space-sm"><a class="inline-flex items-center justify-center h-9 px-space-md bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-primary/90 transition-colors font-semibold" data-path="login" href="#">Masuk</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkdiVFPFfWtfA3mgBh1Fr01lvcROyz6imo2uJmJiNpgbDXUhFk0lbEcQOtpRu6vRQiiKOYL9fwOueajf_sjP9qbMs_DM8azUecsGhUcSj1V-2OhHAOWEJxw1hG3BwmrVcJ2_7-_eB6Vk5VoNdxM9wxyVxSiAEhfSO-nd09-_5pP6HJc7HRniN8IUF9yuHhSmFcY89DEb4lhD1SLR-GLhoy9zPpAJq8_Q1RjX9ZB1s"></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 2: HERO SECTION -->
+<section class="relative w-full px-margin py-space-xl flex flex-col items-center">
+<!-- Ambient Maritime Seal Glow -->
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 bg-primary text-on-primary rounded-full shadow-sm mb-space-md"><span class="material-symbols-outlined text-base text-on-primary">phishing</span><span class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest font-semibold">PERDAGANGAN &amp; PENGADAAN HASIL LAUT</span></div>
+<!-- Main Headline -->
+<h1 class="font-display-mobile text-display-mobile text-on-surface text-center font-bold tracking-tight mb-space-md">Mitra Terpercaya Pengadaan &amp; Pasokan Ikan Segar Nusantara</h1>
+<!-- Subheadline -->
+<p class="font-body-md text-body-md text-secondary text-center max-w-xl mb-space-lg leading-relaxed">Menghubungkan tangkapan nelayan pesisir dengan pasar industri dan konsumen melalui sistem rantai dingin terstandarisasi.</p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row w-full max-w-xs gap-space-sm mb-space-xl"><a class="w-full inline-flex items-center justify-center gap-space-xs h-12 px-space-lg bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-md hover:bg-primary/90 transition-colors font-semibold" href="#hubungi-kami"><span class="material-symbols-outlined text-xl text-on-primary">handshake</span><span class="text-on-primary">Kemitraan &amp; Pasokan</span></a><a class="w-full inline-flex items-center justify-center gap-space-xs h-12 px-space-lg bg-surface-container-lowest text-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors font-semibold" href="#layanan-unggulan"><span class="material-symbols-outlined text-xl text-primary">inventory_2</span><span class="text-primary">Katalog Komoditas</span></a></div><div class="flex flex-wrap justify-center items-center gap-2 mb-space-lg max-w-xl"><span class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-primary border border-outline-variant rounded-full text-xs font-medium shadow-sm"><span class="material-symbols-outlined text-sm text-primary">set_meal</span> Tuna Segar</span><span class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-primary border border-outline-variant rounded-full text-xs font-medium shadow-sm"><span class="material-symbols-outlined text-sm text-primary">set_meal</span> Cakalang Super</span><span class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-primary border border-outline-variant rounded-full text-xs font-medium shadow-sm"><span class="material-symbols-outlined text-sm text-primary">set_meal</span> Kakap Merah</span><span class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest text-primary border border-outline-variant rounded-full text-xs font-medium shadow-sm"><span class="material-symbols-outlined text-sm text-primary">set_meal</span> Tongkol &amp; Tenggiri</span></div>
+<!-- Framed Hero Architectural Image -->
+<div class="relative w-full max-w-2xl bg-surface-container-low p-space-sm rounded-xl shadow-md">
+<!-- Ornate Vintage Corner Accents -->
+<div class="absolute top-2 left-2 w-3 h-3 bg-tertiary-fixed-dim/70 rounded-full"></div>
+<div class="absolute top-2 right-2 w-3 h-3 bg-tertiary-fixed-dim/70 rounded-full"></div>
+<div class="absolute bottom-2 left-2 w-3 h-3 bg-tertiary-fixed-dim/70 rounded-full"></div>
+<div class="absolute bottom-2 right-2 w-3 h-3 bg-tertiary-fixed-dim/70 rounded-full"></div>
+<div class="relative overflow-hidden rounded-lg"><img class="w-full h-72 sm:h-96 object-cover object-center shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1wDiClB1ao_riIPkaFXmnO3UkH3GXP4XnODf-eCUIvshKbkshH70l6wo2lECQzc_W1P88zKDPS7uCNgziReuvOfyGZNYrHz1NDivxY1frWRynRuhj_6kYstIC6sWHZ_envBgfELh_Rd7ZQsDj5IHV2xVgYTtZGE2VUpt8jOGi3tdu5PC89k8RzyNLu4UsjTQhhS555QbtA0SphlFCGwuzTQP8sBCK90svnTjqNho" alt="Varian Ikan Segar dan Hasil Laut Mutu Ekspor Ariq Fish"><div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end p-space-md"><div class="flex flex-col gap-1"><div class="flex flex-wrap gap-1"><span class="px-2 py-0.5 bg-primary text-on-primary rounded text-[10px] font-semibold uppercase tracking-wider">Yellowfin Tuna</span><span class="px-2 py-0.5 bg-primary text-on-primary rounded text-[10px] font-semibold uppercase tracking-wider">Kakap Merah</span><span class="px-2 py-0.5 bg-primary text-on-primary rounded text-[10px] font-semibold uppercase tracking-wider">Tenggiri &amp; Cumi</span></div><p class="font-body-sm text-body-sm text-on-primary italic">Koleksi Tangkapan Laut Harian • Cold Storage Pelabuhan Perikanan Samudera</p></div></div></div>
+</div>
+<!-- Quick Trust Stats -->
+<div class="grid grid-cols-3 w-full max-w-2xl mt-space-lg gap-space-xs sm:gap-space-sm"><div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm text-center flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-primary font-bold">50+ Ton</span><span class="font-label-sm text-label-sm text-secondary">Kapasitas / Bulan</span></div><div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm text-center flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-tertiary font-bold">12+</span><span class="font-label-sm text-label-sm text-secondary">Sentra Nelayan</span></div><div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm text-center flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-primary font-bold">99.8%</span><span class="font-label-sm text-label-sm text-secondary">Mutu Segar</span></div></div>
+</section>
+<!-- SECTION 3: ABOUT SECTION ('Tentang Kami') -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<!-- Section Header -->
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="w-8 h-0.5 bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold tracking-wider uppercase">Tentang Kami</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold mb-space-md">Dedikasi Menjaga Kesegaran Ikan dan Kesejahteraan Nelayan</h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-lg">Ariq Fish hadir sebagai mitra agregator terpercaya yang membeli langsung hasil tangkapan nelayan lokal dengan harga transparan dan adil. Melalui standarisasi penanganan higienis dan fasilitas cold storage modern, kami memastikan rantai pasok ikan laut dan air tawar terjaga kesegarannya sampai ke tangan industri manufaktur, hotel, restoran, dan pasar grosir.</p>
+<!-- 3 Key Strengths -->
+<div class="flex flex-col gap-space-md mb-space-lg"><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-start gap-space-md"><div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 shadow-sm"><span class="material-symbols-outlined text-2xl">payments</span></div><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Pembelian Harga Adil Nelayan</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Menjamin kepastian serapan hasil tangkapan nelayan mitra dengan penimbangan akurat dan pembayaran tepat waktu.</p></div></div><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-start gap-space-md"><div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 shadow-sm"><span class="material-symbols-outlined text-2xl">ac_unit</span></div><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Teknologi Cold Chain Modern</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Sistem pendingin suhu terkontrol (-18°C hingga -25°C) menjaga integritas tekstur, rasa, dan nutrisi komoditas ikan.</p></div></div><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-start gap-space-md"><div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0 shadow-sm"><span class="material-symbols-outlined text-2xl">local_shipping</span></div><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Jaringan Distribusi Cepat</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Armada logistik berpendingin siap mendistribusikan pesanan hasil laut segar dan beku tepat waktu ke seluruh Jabodetabek dan antar pulau.</p></div></div></div>
+<!-- Supporting Architectural Photo & Quote Card -->
+<div class="bg-surface-container p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm"><div class="relative overflow-hidden rounded-lg h-48 w-full"><img class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7nMyqGf-vvJ7HCx_Z9qQu65o-qMs_uVmcGnW-2qYeFiQ8BFSqc4E4Heap7OMpTHoeB0qBUmWgx9VMbda3YjYW2lGWwKtXhxSzSpolgGH8ksZIBiOMzfaTm5-X0BoxOQfNf3-biaRAN2Wwwd9rhJgOimvcuflk9nyGkFEmMsMILiXYJ1RdbGkuRWRd6be3JfIcAPA3rX-EGfK3hzBCEiDOC9UGRgZtIORjpRWulSQ" alt="Nelayan Pesisir Menarik Jaring Tangkapan Ikan Laut Segar"><div class="absolute top-2 left-2 px-space-sm py-0.5 bg-primary text-on-primary rounded font-label-sm text-label-sm flex items-center gap-1 shadow-sm"><span class="material-symbols-outlined text-xs">sailing</span> Kemitraan Nelayan Pesisir Nusantara</div></div><blockquote class="font-body-sm text-body-sm text-secondary italic pl-space-sm mt-space-xs">“Dari laut hingga ke meja pelanggan, integritas kesegaran dan higienitas adalah komitmen mutlak Ariq Fish.”</blockquote><span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider pl-space-sm">— Tim Pengendalian Mutu &amp; Kemitraan Nelayan Ariq Fish</span></div>
+</div>
+</section>
+<!-- SECTION 4: SERVICES SECTION ('Layanan Unggulan') -->
+<section class="w-full px-margin py-space-xl" id="layanan-unggulan">
+<div class="w-full max-w-2xl mx-auto flex flex-col items-center">
+<!-- Section Title & Vintage Ornament Divider -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 bg-primary text-on-primary rounded-full shadow-sm mb-space-xs"><span class="material-symbols-outlined text-on-primary text-sm">set_meal</span><span class="font-label-sm text-label-sm text-on-primary uppercase tracking-widest font-semibold">Solusi Pengadaan Ikan</span></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold text-center mb-space-xs">Layanan Pengadaan &amp; Pasokan Ariq Fish</h2>
+<div class="flex items-center justify-center gap-2 mb-space-lg">
+<span class="h-0.5 w-12 bg-outline-variant"></span>
+<span class="w-2 h-2 rotate-45 bg-primary"></span>
+<span class="h-0.5 w-12 bg-outline-variant"></span>
+</div>
+<!-- Service Cards (Vertical Stack) -->
+<div class="flex flex-col gap-space-md w-full"><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow"><div class="flex items-center gap-space-sm mb-space-xs text-primary"><span class="material-symbols-outlined text-2xl">phishing</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Hulu &amp; Kemitraan</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Pembelian Ikan Segar Nelayan</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Menampung tangkapan nelayan pesisir secara kontinyu: cakalang, tongkol, tenggiri, kakap, kembung, dan cumi-cumi dengan grading transparan.</p></div><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow"><div class="flex items-center gap-space-sm mb-space-xs text-primary"><span class="material-symbols-outlined text-2xl">factory</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Pabrik &amp; Manufaktur</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Suplai Ikan Beku Industri</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Pasokan volume besar untuk pabrik pengalengan, surimi, olahan beku, dan industri pengolahan pakan dengan spesifikasi mutu presisi.</p></div><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow"><div class="flex items-center gap-space-sm mb-space-xs text-primary"><span class="material-symbols-outlined text-2xl">ac_unit</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Logistik Pendingin</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Cold Storage &amp; Rantai Dingin</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Layanan penyimpanan berpendingin, blast freezing cepat, dan distribusi terproteksi es curah food-grade dari pelabuhan sampai tujuan.</p></div><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow"><div class="flex items-center gap-space-sm mb-space-xs text-primary"><span class="material-symbols-outlined text-2xl">restaurant</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Horeka &amp; Katering</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Pasokan Horeka &amp; Grosir Pasar</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Pengiriman rutin harian dan mingguan untuk jaringan restoran seafood, hotel, katering korporat, dan distributor pasar basah.</p></div><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow"><div class="flex items-center gap-space-sm mb-space-xs text-primary"><span class="material-symbols-outlined text-2xl">sanitizer</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Standar Higienitas</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Pemrosesan &amp; Fillet Higienis</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Layanan penyiangan (gutted &amp; scaled), pemotongan steak/fillet, dan pengemasan vakum sesuai kebutuhan kustom mitra ritel.</p></div><div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow"><div class="flex items-center gap-space-sm mb-space-xs text-primary"><span class="material-symbols-outlined text-2xl">public</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Perdagangan Luar Negeri</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Ekspor Hasil Laut Terverifikasi</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed">Fasilitasi ekspor komoditas laut unggulan berstandar sertifikasi karantina ikan, HACCP, dan dokumen legalitas perikanan resmi.</p></div></div>
+</div>
+</section>
+<!-- SECTION 5: NEWS / POSTS SECTION ('Warta & Catatan Lapangan') -->
+<section class="w-full px-margin py-space-xl bg-surface-container-low">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-primary text-on-primary rounded-full mb-space-xs w-max"><span class="material-symbols-outlined text-sm text-on-primary">insights</span><span class="font-label-sm text-label-sm text-on-primary font-semibold tracking-wider uppercase">Kabar &amp; Pasar Ikan</span></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold mb-space-lg">Catatan Lapangan &amp; Info Pasokan</h2>
+<!-- 3 Articles Stack -->
+<div class="flex flex-col gap-space-md mb-space-lg"><article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col"><div class="h-44 w-full relative"><img class="w-full h-full object-cover" data-alt="Laporan panen ikan segar nelayan pantai utara Jawa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5G_69FfbEMVJgZ0zZOBEYWbmz0xQEKOWZ9prTQ6I9CuYVf4TWd_LJ95Is1Sm-gesceCHknwAtODPf4orO2Pcdv6H1Xh0fRdCPGg-urgFiCQgF4Bv1MTEBPYSUqbT3SXvKARadIVoWlcQknLVIFXy7_guZSW0VdPRqN0-VwTOkEdPTt9mHB36WzmAsGvVycKFvtE8M6hQlUDQNMXxbX6yWJWGriqg4QzmZU1uqJDg"><span class="absolute bottom-2 left-2 px-space-sm py-0.5 bg-on-surface/80 text-on-primary rounded font-label-sm text-label-sm">12 Mei 2024</span></div><div class="p-space-md"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs leading-snug">Musim Tangkap Melimpah: Ariq Fish Serap 25 Ton Cakalang dan Tongkol Pantura</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-space-sm">Penguatan rantai pasok dengan serapan langsung di dermaga pendaratan ikan, memastikan harga jual stabil bagi nelayan mitra.</p><div class="flex items-center gap-space-xs text-primary font-label-md text-label-md"><span class="">Baca Laporan Pasokan</span><span class="material-symbols-outlined text-sm">arrow_forward</span></div></div></article><article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col"><div class="h-44 w-full relative"><img class="w-full h-full object-cover" data-alt="Instalasi unit cold storage suhu stabil baru Ariq Fish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJqA_pspe7q_E1f9vJe2Y-TaPGGIyW7hyZz02-2-ZcFDlzkm9WSDcd0_UGPX3RPa5E3CW7ho-xMhIZO7m14bpNZWZGg8uo0QgxTEMgpB2VcC7dyJnFYa7yi2n6rBPqfkrZtKfgABLESbXBhwIC_h3_XNNOkuKuLg86qnA8tq6m7YZP2v7k1510vF8AfAnst5a_3LbfUI_8ywzNrOSXGQDF2Ut4PXXkw1QF8-jj8hs"><span class="absolute bottom-2 left-2 px-space-sm py-0.5 bg-on-surface/80 text-on-primary rounded font-label-sm text-label-sm">28 April 2024</span></div><div class="p-space-md"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs leading-snug">Peningkatan Kapasitas Cold Storage Baru: Jamin Stabilitas Pasokan Industri</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-space-sm">Fasilitas pembekuan cepat (blast freezer) beroperasi penuh untuk menjaga kualitas mutu ikan beku standar industri dan ekspor.</p><div class="flex items-center gap-space-xs text-primary font-label-md text-label-md"><span class="">Baca Laporan Pasokan</span><span class="material-symbols-outlined text-sm">arrow_forward</span></div></div></article><article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col"><div class="h-44 w-full relative"><img class="w-full h-full object-cover" data-alt="Armada pengiriman ikan segar ke pasar induk dan horeka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvHIxDBQqgow5TN2ZijNDkiE66w7AvUfQT7Xvqtly5ZkBekcKnSLPqPpLIJ0oE7V1Gxd6mTTK-FN_ShkJlMsWeXIaYLBmtUbRj34_SClUsg3l8WpOdUxA0atpCkyNMqeIi7lJzXmkhgH5V86qIQ5fyzZ90EJYGVK6eiMd6WMR9tK9osb44Gx9LnaOTId9oNSMubllPZZgjHd2nLDVsBugBDMOzHG-Pq8OwJpDJcxg"><span class="absolute bottom-2 left-2 px-space-sm py-0.5 bg-on-surface/80 text-on-primary rounded font-label-sm text-label-sm">15 April 2024</span></div><div class="p-space-md"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs leading-snug">Optimalisasi Distribusi Ikan Segar ke 50+ Jaringan Horeka se-Jabodetabek</h3><p class="font-body-sm text-body-sm text-secondary leading-relaxed mb-space-sm">Sistem pengiriman terjadwal pagi hari memungkinkan restoran menyajikan hidangan laut segar dengan kualitas mutu teruji.</p><div class="flex items-center gap-space-xs text-primary font-label-md text-label-md"><span class="">Baca Laporan Pasokan</span><span class="material-symbols-outlined text-sm">arrow_forward</span></div></div></article></div>
+<!-- Action Button -->
+<div class="w-full flex justify-center">
+<a class="inline-flex items-center justify-center gap-space-xs h-11 px-space-lg bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors" href="#"><span class="">Lihat Semua Update Pasokan</span><span class="material-symbols-outlined text-base">list_alt</span></a>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CONTACT SECTION ('Hubungi Kami') -->
+<section class="w-full px-margin py-space-xl" id="hubungi-kami">
+<div class="w-full max-w-2xl mx-auto flex flex-col">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-primary text-on-primary rounded-full mb-space-xs w-max"><span class="material-symbols-outlined text-sm text-on-primary">handshake</span><span class="font-label-sm text-label-sm text-on-primary font-semibold tracking-wider uppercase">Kemitraan Jual Beli Ikan</span></div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold mb-space-md">
+        Hubungi Kami
+      </h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-lg">Jual hasil tangkapan Anda kepada kami atau ajukan permintaan pasokan ikan segar dan beku untuk kebutuhan usaha, restoran, maupun pabrik Anda.</p>
+<!-- Verbatim Contact Cards -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm mb-space-lg flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Alamat Kantor</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Jl. Pelabuhan Niaga No. 42, Kawasan Kota Lama, Jakarta Utara</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">call</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Telepon / WhatsApp</span>
+<a class="font-body-sm text-body-sm text-primary font-semibold hover:underline" href="tel:085156256177">085156256177</a>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">mail</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Surat Elektronik</span>
+<a class="font-body-sm text-body-sm text-primary font-semibold hover:underline" href="mailto:ariqfathi@gmail.com">ariqfathi@gmail.com</a>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">schedule</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Jam Operasional</span>
+<span class="font-body-sm text-body-sm text-on-surface">Senin - Jumat (08:30 - 17:00 WIB), Sabtu dengan janji temu</span>
+</div>
+</div>
+</div>
+<!-- Interactive Message Form -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-md flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary">receipt_long</span><span class="">Formulir Penawaran &amp; Pengadaan Ikan</span></h3>
+<form class="flex flex-col gap-space-sm" id="consultation-form" onsubmit="event.preventDefault(); showFeedback();">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="nama">Nama Lengkap</label>
+<input class="w-full h-11 px-space-sm bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="nama" placeholder="Contoh: Raden Adipati Aryo" required="" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="email">Email Perusahaan</label>
+<input class="w-full h-11 px-space-sm bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="email" placeholder="nama@institusi.go.id" required="" type="email">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="topik">Topik Kajian</label>
+<select class="w-full h-11 px-space-sm bg-surface rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none shadow-sm" id="topik"><option value="beli-ikan" class="">Penawaran Jual Tangkapan Ikan (Nelayan / Pengepul)</option><option value="suplai-horeka" class="">Permintaan Pasokan Ikan Segar (Restoran / Hotel)</option><option value="suplai-industri" class="">Pasokan Ikan Beku Industri &amp; Pabrik</option><option value="grosir-pasar" class="">Pengadaan Grosir Partai Besar</option><option value="cold-storage" class="">Layanan Cold Storage &amp; Pembekuan</option><option value="ekspor" class="">Kerjasama Ekspor Komoditas Laut</option></select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="pesan">Pesan / Kebutuhan Restorasi</label>
+<textarea class="w-full p-space-sm bg-surface rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none shadow-sm resize-none" id="pesan" placeholder="Sebutkan jenis komoditas ikan, estimasi volume (kg/ton), kondisi (segar/beku), dan kebutuhan pengiriman..." required="" rows="4"></textarea>
+</div>
+<button class="w-full h-12 mt-space-xs inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-md hover:bg-primary/90 transition-colors cursor-pointer font-semibold" type="submit"><span class="material-symbols-outlined text-lg text-on-primary">send</span><span class="text-on-primary">Kirim Pengajuan Pasokan</span></button>
+</form>
+<!-- Feedback Container -->
+<div class="hidden mt-space-md p-space-sm bg-secondary-fixed rounded-lg text-on-secondary-fixed font-body-sm text-body-sm flex items-center gap-space-xs" id="form-feedback"><span class="material-symbols-outlined text-xl text-primary">check_circle</span><span class="">Pengajuan Anda telah diterima oleh Tim Pengadaan Ariq Fish. Kami akan menghubungi Anda segera melalui WhatsApp/telepon.</span></div>
+</div>
+<!-- Map View with Pin -->
+<div class="relative w-full rounded-xl overflow-hidden shadow-sm bg-surface-container-low flex flex-col">
+<div class="w-full h-56 bg-primary/5 flex items-center justify-center relative overflow-hidden" data-location="Kawasan Kota Lama Sunda Kelapa, Jakarta Utara, Indonesia"><div class="absolute inset-0 bg-primary/10 flex items-center justify-center"><div class="flex flex-col items-center gap-space-xs p-space-md bg-surface-container-lowest/90 rounded-xl shadow-md backdrop-blur-xl"><span class="material-symbols-outlined text-primary text-3xl">location_on</span><span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Pangkalan &amp; Gudang Ariq Fish</span><span class="font-body-sm text-body-sm text-secondary">Kawasan Pelabuhan Niaga Sunda Kelapa, Jakarta Utara</span></div></div></div>
+<div class="p-space-sm flex items-center justify-between bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">pin_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface">Kawasan Kota Lama Sunda Kelapa</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">6.1264° S, 106.8118° E</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FOOTER SECTION -->
+<footer class="w-full px-margin pt-space-xl pb-space-lg bg-surface-container-highest">
+<div class="w-full max-w-2xl mx-auto flex flex-col items-center text-center">
+<!-- Logo Seal Image with Alt and Description -->
+<div class="w-20 h-20 mb-space-sm flex items-center justify-center">
+<img alt="Nusantara Heritage Wordmark &amp; Seal" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkdiVFPFfWtfA3mgBh1Fr01lvcROyz6imo2uJmJiNpgbDXUhFk0lbEcQOtpRu6vRQiiKOYL9fwOueajf_sjP9qbMs_DM8azUecsGhUcSj1V-2OhHAOWEJxw1hG3BwmrVcJ2_7-_eB6Vk5VoNdxM9wxyVxSiAEhfSO-nd09-_5pP6HJc7HRniN8IUF9yuHhSmFcY89DEb4lhD1SLR-GLhoy9zPpAJq8_Q1RjX9ZB1s">
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Ariq Fish</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest mb-space-md">Perdagangan, Pembelian &amp; Pasokan Hasil Laut Nusantara</span>
+<p class="font-body-sm text-body-sm text-secondary max-w-md mb-space-lg leading-relaxed">Menjadi jembatan andalan antara hasil tangkapan nelayan pesisir dengan rantai pasok industri dan pasar kuliner nasional melalui keandalan rantai dingin dan mutu terbaik.</p>
+<!-- Quick Links -->
+<div class="flex flex-wrap justify-center gap-x-space-md gap-y-space-xs mb-space-lg font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary transition-colors" href="#tentang-kami">Tentang Kami</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary transition-colors" href="#layanan-unggulan">Layanan</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary transition-colors" href="#">Warta &amp; Arsip</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary transition-colors" href="#hubungi-kami">Kontak</a>
+</div>
+<!-- Social Media Icons -->
+<div class="flex items-center gap-space-md mb-space-lg"><a aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary/90 transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-lg text-on-primary">public</span></a><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary/90 transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-lg text-on-primary">photo_camera</span></a><a aria-label="YouTube" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary/90 transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-lg text-on-primary">smart_display</span></a><a aria-label="X" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary/90 transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-lg text-on-primary">share</span></a></div>
+<!-- Copyright Notice -->
+<div class="pt-space-md w-full">
+<p class="font-body-sm text-body-sm text-secondary">© 2024 Ariq Fish. Hak Cipta Dilindungi Undang-Undang.</p>
+</div>
+</div>
+</footer>
+<script>
+    function showFeedback() {
+      const feedback = document.getElementById('form-feedback');
+      if (feedback) {
+        feedback.classList.remove('hidden');
+        setTimeout(() => {
+          feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(45,30,24,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 transition-colors text-primary font-semibold" data-path="company-overview" href="#"><span class="material-symbols-outlined text-2xl">set_meal</span><span class="font-label-sm text-label-sm">Profil</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-colors" data-path="commodities" href="#layanan-unggulan"><span class="material-symbols-outlined text-2xl">inventory_2</span><span class="font-label-sm text-label-sm">Komoditas</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#layanan-unggulan"><span class="material-symbols-outlined text-2xl">ac_unit</span><span class="font-label-sm text-label-sm">Layanan</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#hubungi-kami"><span class="material-symbols-outlined text-2xl">handshake</span><span class="font-label-sm text-label-sm">Kemitraan</span></a></div></nav>
+
+</body></html>
