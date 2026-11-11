@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { siteConfig } from "@/config/site";
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirect = searchParams.get("redirect") || "/dashboard";
@@ -25,27 +25,6 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error || "Gagal masuk");
-      }
-
-      // Berhasil login
-      router.push(data.user.role_name === "admin" ? redirect : "/");
-      router.refresh();
-    } catch (err: any) {
-      setError(err.message || "Email atau password tidak cocok");
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (
@@ -97,7 +76,34 @@ export default function LoginPage() {
             </button>
           </div>
 
-          <form className="space-y-4" onSubmit={handleLogin}>
+          <form
+            className="space-y-4"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setLoading(true);
+              setError(null);
+              try {
+                const res = await fetch("/api/auth/login", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ email, password }),
+                });
+
+                const data = await res.json();
+                if (!res.ok) {
+                  throw new Error(data.error || "Gagal masuk");
+                }
+
+                // Berhasil login
+                router.push(data.user.role_name === "admin" ? redirect : "/");
+                router.refresh();
+              } catch (err: any) {
+                setError(err.message || "Email atau password tidak cocok");
+              } finally {
+                setLoading(false);
+              }
+            }}
+          >
             <div>
               <label
                 htmlFor="email"
@@ -168,3 +174,16 @@ export default function LoginPage() {
   );
 }
 
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#fef8f4] flex items-center justify-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#00507d]"></div>
+        </div>
+      }
+    >
+      <LoginForm />
+    </Suspense>
+  );
+}

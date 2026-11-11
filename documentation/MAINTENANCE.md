@@ -51,6 +51,7 @@ Daftar kebutuhan penambahan fitur di masa mendatang:
   - Panel kelola tiket pesanan di Dashboard Admin (`/dashboard/orders`) dengan tombol status konfirmasi dan pintas WhatsApp.
 - **Step 4 - Deploy & Pemeliharaan:**
   - Halaman 404 kustom bertema Ariq Fish.
+  - Pembungkusan `useSearchParams()` pada halaman `/login` dengan `<Suspense>` boundary untuk mencegah kegagalan prerendering static Next.js di Vercel build.
   - Panduan deploy Vercel di `/documentation/DEPLOYMENT.md`.
   - Log pemeliharaan di `/documentation/MAINTENANCE.md`.
   - Pembaruan status di `/documentation/PROGRESS.md`.
