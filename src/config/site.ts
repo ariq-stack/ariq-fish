@@ -121,7 +121,7 @@ export const siteConfig: SiteConfig = {
   },
   metrics: [
     { value: "50+ Ton", label: "Kapasitas / Hari" },
-    { value: "12+ Pelabuhan", label: "Sentra Tangkapan" },
+    { value: "12+ Hub", label: "Sentra Pelabuhan" },
     { value: "99.8%", label: "Kesegaran Terjaga" },
     { value: "Sejak 1950", label: "Dedikasi 3 Generasi" },
   ],

@@ -144,18 +144,18 @@
                 <span>Katalog Layanan & Komoditas</span>
               </a>
             </div>
-            <div class="pt-4 grid grid-cols-3 gap-3">
-              <div class="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm">
-                <span class="block font-display font-bold text-2xl text-[#00507d]">50+ Ton</span>
-                <span class="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">Kapasitas / Hari</span>
+            <div class="pt-4 grid grid-cols-3 gap-2.5 sm:gap-3 items-stretch">
+              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full">
+                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">50+ Ton</span>
+                <span class="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">Kapasitas / Hari</span>
               </div>
-              <div class="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm">
-                <span class="block font-display font-bold text-2xl text-[#00507d]">12+ Pelabuhan</span>
-                <span class="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">Sentra Tangkapan</span>
+              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full">
+                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">12+ Hub</span>
+                <span class="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">Sentra Pelabuhan</span>
               </div>
-              <div class="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm">
-                <span class="block font-display font-bold text-2xl text-[#00507d]">99.8%</span>
-                <span class="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">Kesegaran Terjaga</span>
+              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full">
+                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">99.8%</span>
+                <span class="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">Kesegaran Terjaga</span>
               </div>
             </div>
           </div>
@@ -768,16 +768,6 @@
         <p class="text-xs text-[#40474f] mt-1">Portal Akun &amp; Manajemen Ariq Fish</p>
       </div>
 
-      <div class="mb-4 p-3 rounded bg-[#f8f2ee] border border-[#ede7e3] flex items-center justify-between text-xs">
-        <div>
-          <span class="font-bold text-[#00507d] block text-[11px]">Akun Admin Awal:</span>
-          <span class="font-mono text-[11px]">admin@gmail.com / 123456</span>
-        </div>
-        <button id="fill-demo-btn" class="px-2 py-1 rounded bg-[#00507d] text-white text-[10px] font-semibold">
-          Isi Cepat
-        </button>
-      </div>
-
       <form id="previewLoginForm" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-[#1d1b19] mb-1">Alamat Email</label>
@@ -1025,11 +1015,6 @@
 
     document.getElementById('close-order-btn')?.addEventListener('click', () => {
       orderModal?.classList.add('hidden');
-    });
-
-    document.getElementById('fill-demo-btn')?.addEventListener('click', () => {
-      document.getElementById('demo-email').value = 'admin@gmail.com';
-      document.getElementById('demo-password').value = '123456';
     });
 
     document.getElementById('previewLoginForm')?.addEventListener('submit', (e) => {

@@ -15,18 +15,6 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fillAdminCredentials = () => {
-    setEmail("admin@gmail.com");
-    setPassword("123456");
-    setError(null);
-  };
-
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-  };
-
   return (
     <div className="min-h-screen bg-[#fef8f4] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -60,21 +48,6 @@ function LoginForm() {
               <span>{error}</span>
             </div>
           )}
-
-          {/* Quick Demo Pill */}
-          <div className="mb-5 p-3 rounded bg-[#f8f2ee] border border-[#ede7e3] flex items-center justify-between">
-            <div className="text-[11px] text-[#40474f]">
-              <span className="font-semibold block text-[#00507d]">Akun Admin Pengujian:</span>
-              <span>admin@gmail.com / 123456</span>
-            </div>
-            <button
-              type="button"
-              onClick={fillAdminCredentials}
-              className="text-[11px] font-semibold px-2.5 py-1 rounded bg-[#00507d] text-white hover:bg-[#0369a1] transition-colors shadow-sm"
-            >
-              Isi Otomatis
-            </button>
-          </div>
 
           <form
             className="space-y-4"

@@ -105,16 +105,16 @@ export default function Hero() {
             </div>
 
             {/* Metrics Strip */}
-            <div className="pt-4 grid grid-cols-3 gap-3">
+            <div className="pt-4 grid grid-cols-3 gap-2.5 sm:gap-3 items-stretch">
               {siteConfig.metrics.slice(0, 3).map((metric) => (
                 <div
                   key={metric.label}
-                  className="p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm"
+                  className="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full"
                 >
-                  <span className="block font-display font-bold text-xl sm:text-2xl text-[#00507d]">
+                  <span className="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">
                     {metric.value}
                   </span>
-                  <span className="block text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-0.5">
+                  <span className="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">
                     {metric.label}
                   </span>
                 </div>
