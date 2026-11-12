@@ -2,9 +2,16 @@ export interface ServiceItem {
   id: string;
   code: string;
   title: string;
+  slug: string;
   description: string;
   actionText: string;
   icon: string;
+  subtitle: string;
+  image: string;
+  highlights: string[];
+  processSteps: { title: string; desc: string }[];
+  specs: { label: string; value: string }[];
+  content: string[];
 }
 
 export interface NewsItem {
@@ -142,55 +149,277 @@ export const siteConfig: SiteConfig = {
       id: "service-1",
       code: "Layanan 01",
       title: "Pembelian Ikan Tangkapan Segar",
+      slug: "pembelian-ikan-tangkapan-segar",
       description:
         "Direct sourcing dari nelayan kapal motor di dermaga pendaratan ikan dengan penimbangan presisi dan sistem pembayaran kontan transparan.",
       actionText: "Pelajari Skema Kemitraan",
       icon: "sailing",
+      subtitle: "Program Kemitraan Direct Sourcing Nelayan Nusantara Sejak 1950",
+      image: "/images/about-fishermen.png",
+      highlights: [
+        "Penimbangan digital presisi di dermaga pendaratan ikan tanpa potongan tersembunyi.",
+        "Sistem pembayaran kontan (cash-on-dock) atau transfer seketika saat kapal sandar.",
+        "Penyediaan es balok & es serpih higienis sebelum kapal nelayan melaut.",
+      ],
+      processSteps: [
+        {
+          title: "1. Sandar & Sortir",
+          desc: "Kapal motor nelayan sandar langsung di 12 sentra dermaga pendaratan mitra Ariq Fish.",
+        },
+        {
+          title: "2. Grading Mutu",
+          desc: "Tim quality assurance memeriksa kejernihan mata, insang, dan suhu internal daging ikan.",
+        },
+        {
+          title: "3. Timbang Digital",
+          desc: "Penimbangan transparan disaksikan langsung oleh kapten dan perwakilan ABK kapal.",
+        },
+        {
+          title: "4. Pencairan Kontan",
+          desc: "Pembayaran diselesaikan seketika di kasir dermaga secara kontan atau transfer bank.",
+        },
+      ],
+      specs: [
+        { label: "Wilayah Serap", value: "Pesisir Utara Jawa, Selat Bali, Maluku, & Laut Natuna" },
+        { label: "Kapasitas Serap", value: "Hingga 50+ Ton per hari" },
+        { label: "Metode Tangkapan", value: "Pancing Ulur, Rawai (Longline), & Jaring Ramah Lingkungan" },
+        { label: "Sistem Pembayaran", value: "Kontan di Dermaga / Real-time Transfer Bank" },
+      ],
+      content: [
+        "Sejak didirikan oleh keluarga Ariq pada tahun 1950, Ariq Fish menempatkan kesejahteraan nelayan sebagai pilar utama keberlangsungan usaha. Kami memangkas rantai perantara tengkulak yang panjang dengan hadir langsung di dermaga pendaratan ikan strategis Nusantara.",
+        "Setiap kapal motor yang merapat disambut oleh tim penerimaan Ariq Fish dengan standar timbang digital terkalibrasi metrologi legal. Kami menjamin transparansi 100% pada setiap kilogram hasil jerih payah nelayan tanpa potongan tak beralasan.",
+        "Melalui skema kemitraan binaan nelayan dan suplai es kristal bersanitasi pangan, kapal mitra kami mampu menjaga suhu tangkapan tetap prima hingga sandar kembali, sehingga harga jual yang mereka peroleh selalu berada pada level tertinggi pasar lelang.",
+      ],
     },
     {
       id: "service-2",
       code: "Layanan 02",
       title: "Pengadaan Ikan Beku Skala Industri",
+      slug: "pengadaan-ikan-beku-skala-industri",
       description:
         "Suplai rutin tonase besar untuk Tuna, Cakalang, Tongkol, Kakap Merah, Kembung, Lemuru, dan Cumi untuk pabrik pengalengan & pengolahan.",
       actionText: "Katalog Komoditas",
       icon: "warehouse",
+      subtitle: "Solusi Pasokan Kontrak Tonase Besar Pabrik Pengalengan & Ekspor",
+      image: "/images/hero-fish-platter.png",
+      highlights: [
+        "Jaminan kontinuitas pasokan kontrak bulanan dan tahunan bebas kelangkaan musim.",
+        "Spesifikasi ukuran seragam (size grading) sesuai toleransi mesin industri pengolahan.",
+        "Sertifikat resmi bebas kontaminasi formalin, logam berat, dan residu kimia.",
+      ],
+      processSteps: [
+        {
+          title: "1. Analisis Kebutuhan",
+          desc: "Konsultasi volume tonase bulanan, toleransi gramasi ukuran, dan jadwal kedatangan.",
+        },
+        {
+          title: "2. Kontrak Pasokan",
+          desc: "Penetapan harga kontrak lindung nilai (hedging) yang stabil untuk jangka panjang.",
+        },
+        {
+          title: "3. Blast Freezing & Pack",
+          desc: "Pembekuan blast -40°C dalam master carton berlabel barcode pelacakan batch.",
+        },
+        {
+          title: "4. Pengiriman Reefer",
+          desc: "Armada truk thermo king berpendingin langsung menuju gudang pabrik pembeli.",
+        },
+      ],
+      specs: [
+        { label: "Komoditas", value: "Tuna Yellowfin, Cakalang, Tongkol Komo, Kembung, Lemuru" },
+        { label: "Minimum Order", value: "500 kg - 20 Ton per pengiriman" },
+        { label: "Kemasan", value: "Master Carton 10kg, 20kg, atau Block Frozen" },
+        { label: "Suhu Distribusi", value: "Terkontrol -18°C hingga -25°C" },
+      ],
+      content: [
+        "Pabrik pengalengan ikan, industri tepung ikan bermutu tinggi, dan perusahaan pengolahan hasil laut membutuhkan kepastian volume harian agar mesin lini produksi tidak terhenti. Ariq Fish adalah mitra terpercaya yang menjamin ketersediaan bahan baku ikan pelagis secara berkelanjutan.",
+        "Dengan jaringan cold storage strategis berkapasitas ribuan ton, kami mampu menyerap surplus tangkapan di musim raya dan mengalokasikannya secara teratur saat cuaca laut ekstrem, sehingga mitra industri tidak terpengaruh oleh lonjakan harga pasar yang liar.",
+        "Seluruh komoditas industri kami disertai sertifikasi hasil uji laboratorium berkala mengenai kadar histamin, TVB-N (Total Volatile Base Nitrogen), serta bebas bakteri patogen berbahaya sesuai standar BPOM dan KKP.",
+      ],
     },
     {
       id: "service-3",
       code: "Layanan 03",
       title: "Rantai Dingin & Cold Storage",
+      slug: "rantai-dingin-cold-storage",
       description:
         "Penyewaan kapasitas ruang beku dan manajemen cold storage bersuhu hingga -25°C dengan pemantauan suhu otomatis serta standar sanitasi ketat.",
       actionText: "Fasilitas Gudang Beku",
       icon: "ac_unit",
+      subtitle: "Fasilitas Gudang Beku Berstandar HACCP Suhu Ekstrem -25°C",
+      image: "/images/news-2.png",
+      highlights: [
+        "Suhu stabil -20°C hingga -25°C dipantau sensor IoT digital 24 jam nonstop.",
+        "Sistem pendingin ganda (redundant cooling system) dengan genset darurat otomatis.",
+        "Manajemen pergudangan FIFO (First-In, First-Out) dengan pelacakan barcode online.",
+      ],
+      processSteps: [
+        {
+          title: "1. Inbound & Verifikasi",
+          desc: "Cek suhu barang masuk di anteroom suhu 5°C sebelum masuk ke freezer room utama.",
+        },
+        {
+          title: "2. Paletisasi & Barcode",
+          desc: "Barang ditata di rak heavy-duty pallet dengan identitas barcode batch yang unik.",
+        },
+        {
+          title: "3. Monitoring 24 Jam",
+          desc: "Sensor IoT mengirimkan peringatan seketika jika terjadi fluktuasi termal 0.5°C.",
+        },
+        {
+          title: "4. Outbound Berjadwal",
+          desc: "Pengeluaran barang tertib FIFO melalui dock seal kedap udara tanpa kehilangan suhu.",
+        },
+      ],
+      specs: [
+        { label: "Suhu Operasional", value: "-20°C sampai -25°C (Storage) & -45°C (Blast Room)" },
+        { label: "Infrastruktur", value: "Dock Leveler, Anteroom Berpendingin, Genset 500 kVA" },
+        { label: "Keamanan", value: "CCTV 24 Jam, Akses Kartu RFID, Asuransi Kargo Terlindungi" },
+        { label: "Lokasi Strategis", value: "Marketing Gallery & Central Hub PIK 2, Jakarta Utara" },
+      ],
+      content: [
+        "Rantai pasok dingin (cold chain) adalah jantung dari kualitas hasil laut. Ariq Fish Cold Storage Hub di PIK 2 Jakarta Utara dirancang dengan standar arsitektur industri pangan modern yang meminimalkan fluktuasi termal selama proses bongkar muat.",
+        "Dilengkapi ruang anteroom berpendingin dan dock seal kedap udara, kontak antara produk beku dengan udara luar ruangan berkelembaban tinggi dapat dicegah 100%. Hal ini menghentikan kondensasi yang berisiko merusak kemasan dan mutu produk.",
+        "Kami melayani penyewaan kapasitas ruang beku baik untuk jangka pendek (harian/mingguan saat transit kargo) maupun kontrak sewa tahunan bagi pelaku usaha importir dan eksportir hasil perikanan.",
+      ],
     },
     {
       id: "service-4",
       code: "Layanan 04",
       title: "Suplai Restoran & Hotel (Horeka)",
+      slug: "suplai-restoran-hotel-horeka",
       description:
         "Pengiriman harian terjadwal ikan segar bersih dan portion cut untuk restoran seafood, hotel berbintang, dan jaringan katering premium.",
       actionText: "Paket Pasokan Horeka",
       icon: "restaurant",
+      subtitle: "Pasokan Harian Ikan Segar Bersih Dini Hari Siap Olah Dapur Premium",
+      image: "/images/news-3.png",
+      highlights: [
+        "Pengiriman terjadwal subuh / pagi hari sebelum jam persiapan dapur dimulai.",
+        "Bisa dipesan dalam bentuk utuh bersisik, disiangi bersih, atau portion cut presisi.",
+        "Garansi tukar baru seketika jika kualitas tidak sesuai standar kesepakatan.",
+      ],
+      processSteps: [
+        {
+          title: "1. Order Daring / PO",
+          desc: "Executive chef atau purchasing mengirim pesanan via portal atau WA sebelum jam 21:00 WIB.",
+        },
+        {
+          title: "2. Sortasi Subuh",
+          desc: "Ikan segar hasil tangkapan malam disortir dan dipacking es basah food grade.",
+        },
+        {
+          title: "3. Loading Reefer",
+          desc: "Armada motor box pendingin & mobil thermo berangkat menuju lokasi pukul 05:00 WIB.",
+        },
+        {
+          title: "4. Handover Dapur",
+          desc: "Ikan diterima langsung oleh kitchen staff lengkap dengan lembar checklist mutu.",
+        },
+      ],
+      specs: [
+        { label: "Cakupan Kirim", value: "DKI Jakarta, Tangerang, BSD, Bekasi, & Depok" },
+        { label: "Jadwal Kirim", value: "Gelombang 1 (06:00 - 08:00) & Gelombang 2 (10:00 - 12:00)" },
+        { label: "Produk Favorit", value: "Tuna Sashimi Loin, Kakap Merah, Kerapu, Cumi Sero, Udang" },
+        { label: "Ketentuan Order", value: "Mulai dari 5 kg (Tersedia opsi invoice termin korporat)" },
+      ],
+      content: [
+        "Restoran hidangan laut dan hotel berbintang tidak boleh berkompromi dengan kesegaran bahan baku. Layanan Ariq Fish Horeka Daily Supply dirancang khusus untuk membebaskan para chef dari kerumitan berbelanja subuh ke pasar ikan tradisional.",
+        "Setiap produk yang dikirimkan telah melalui proses seleksi ketat: mata jernih cembung, insang merah segar beraroma khas laut alami, dan elastisitas daging kenyal sempurna. Kami juga menyediakan opsi ikan yang telah disiangi dan dipotong rapi sesuai gramasi porsi menu Anda.",
+        "Didukung sistem faktur tagihan transparan dengan term pembayaran fleksibel bagi pelanggan kemitraan korporat, lebih dari 50 restoran premium di Jabodetabek mempercayakan pasokan harian mereka kepada Ariq Fish.",
+      ],
     },
     {
       id: "service-5",
       code: "Layanan 05",
       title: "Pemrosesan & Fillet Higienis",
+      slug: "pemrosesan-fillet-higienis",
       description:
         "Pembersihan insang, penyiangan isi perut (gutting), fillet loin, dan vacuum pack kedap udara berstandar food safety & halal.",
       actionText: "Standar Pemrosesan",
       icon: "content_cut",
+      subtitle: "Layanan Penyiangan, Fillet Loin, & Vacuum Pack Bersertifikat Halal",
+      image: "/images/hero-fish-platter.png",
+      highlights: [
+        "Fasilitas cleanroom berpendingin suhu 12°C mencegah proliferasi bakteri.",
+        "Tenaga ahli fillet berpengalaman dengan hasil potongan rapi minim sisa daging.",
+        "Kemasan vacuum pack thermoforming kedap udara memperpanjang umur simpan.",
+      ],
+      processSteps: [
+        {
+          title: "1. Sanitasi & Pencucian",
+          desc: "Ikan dibilas air es steril berkadar klorin terkontrol standar sanitasi pangan.",
+        },
+        {
+          title: "2. Descaling & Gutting",
+          desc: "Pembuangan sisik dan isi perut secara presisi tanpa merobek dinding perut.",
+        },
+        {
+          title: "3. Filleting & Trimming",
+          desc: "Pemotongan loin bebas tulang, darah (bloodline), dan kulit oleh master cutter.",
+        },
+        {
+          title: "4. Vacuum & Chilling",
+          desc: "Pengemasan vakum kedap udara dan pembekuan cepat seketika di suhu -40°C.",
+        },
+      ],
+      specs: [
+        { label: "Standar Fasilitas", value: "HACCP, Good Manufacturing Practice (GMP), & Halal Kemenag" },
+        { label: "Tipe Potongan", value: "Whole Round, Gutted Gilled Scaled (GGS), Fillet Loin, Steak" },
+        { label: "Kemasan Ritel", value: "Vacuum Pouch 500g, 1kg, 2kg, & Custom Private Labeling" },
+        { label: "Masa Simpan", value: "Hingga 12 bulan pada penyimpanan beku -18°C" },
+      ],
+      content: [
+        "Pengolahan primer hasil laut yang dilakukan secara tidak higienis dapat merusak seluruh nilai komoditas. Ariq Fish mengoperasikan ruang pemrosesan bersanitasi tinggi di mana seluruh staf wajib menggunakan seragam steril pelindung lengkap.",
+        "Layanan fillet kami sangat diminati oleh jaringan supermarket modern dan brand makanan beku siap olah (ready-to-cook). Kami menyediakan layanan pengemasan kustom (white-label / OEM) lengkap dengan penempelan stiker informasi nilai gizi dan barcode ritel.",
+        "Dengan mesin vacuum pack bertekanan tinggi, oksigen di dalam kemasan dieliminasi total, mencegah terjadinya freezer burn dan oksidasi lemak ikan selama masa penyimpanan maupun pengiriman ke luar kota.",
+      ],
     },
     {
       id: "service-6",
       code: "Layanan 06",
       title: "Ekspor Hasil Laut & Karantina",
+      slug: "ekspor-hasil-laut-karantina",
       description:
         "Pengurusan dokumen karantina ikan (Health Certificate), kelayakan ekspor CITES/HACCP, serta kontainer pendingin kargo internasional.",
       actionText: "Konsultasi Ekspor",
       icon: "public",
+      subtitle: "Konsultasi & Pengurusan Dokumen Ekspor Kargo Internasional BKIPM",
+      image: "/images/news-1.png",
+      highlights: [
+        "Penerbitan Sertifikat Kesehatan Ikan (Health Certificate) resmi dari BKIPM/KKP.",
+        "Kemitraan strategis dengan maskapai kargo udara dan pelayaran kontainer reefer global.",
+        "Pemenuhan regulasi ketat negara tujuan (FDA Amerika, EU Standard, Japan MAFF).",
+      ],
+      processSteps: [
+        {
+          title: "1. Uji Laboratorium",
+          desc: "Pengujian mikrobiologi dan kimia bebas cemaran di lab uji terakreditasi KKP.",
+        },
+        {
+          title: "2. Verifikasi Dokumen",
+          desc: "Penerbitan Health Certificate (HC), Certificate of Origin (COO), dan dokumen karantina.",
+        },
+        {
+          title: "3. Stuffing Berpendingin",
+          desc: "Pemuatan ke kontainer reefer 20ft/40ft di hadapan inspektur karantina resmi.",
+        },
+        {
+          title: "4. Customs Clearance",
+          desc: "Pengurusan kepabeanan ekspor cepat di Pelabuhan Tanjung Priok atau Bandara Soetta.",
+        },
+      ],
+      specs: [
+        { label: "Negara Tujuan", value: "Jepang, Korea Selatan, Singapura, Malaysia, Tiongkok, & UE" },
+        { label: "Moda Angkut", value: "Air Freight (Live & Chilled) & Sea Freight Reefer (Frozen)" },
+        { label: "Kelengkapan Dokumen", value: "Health Certificate, COO, Bill of Lading, Packing List, Invoice" },
+        { label: "Port of Loading", value: "Pelabuhan Tanjung Priok (IDTPP) & Bandara Soekarno-Hatta (CGK)" },
+      ],
+      content: [
+        "Indonesia memiliki potensi perikanan maritim terbesar di kawasan khatulistiwa, namun regulasi perdagangan lintas negara menuntut kepatuhan standar internasional yang ketat. Divisi Ekspor & Karantina Ariq Fish hadir mendampingi para eksportir dan importir global dalam merealisasikan transaksi komoditas bahari Indonesia.",
+        "Tim spesialis regulasi kami mengurus seluruh berkas perizinan karantina, mulai dari uji bebas bakteri salmonella dan vibrio, penerbitan Sertifikat Kesehatan Ikan dan Mutu (Health Certificate), hingga penanganan izin khusus CITES apabila diperlukan.",
+        "Kami memiliki slot kargo berpendingin prioritas pada maskapai penerbangan internasional dan jalur pelayaran laut utama, menjamin waktu transit tercepat sehingga produk tiba di pasar Tokyo, Seoul, maupun Singapura dalam kondisi kesegaran maksimal.",
+      ],
     },
   ],
   initialNews: [

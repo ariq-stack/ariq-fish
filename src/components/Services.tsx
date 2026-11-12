@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export default function Services() {
@@ -25,37 +26,37 @@ export default function Services() {
           {siteConfig.services.map((service) => (
             <div
               key={service.id}
-              className="group p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-warm hover:shadow-warm-lg hover:border-[#c5a059] transition-all flex flex-col justify-between"
+              className="group p-6 sm:p-7 rounded-lg bg-white border border-[#ede7e3] shadow-warm hover:shadow-warm-lg hover:border-[#00507d]/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
-              <div>
+              <Link href={`/layanan/${service.slug}`} className="block">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center group-hover:bg-[#00507d] group-hover:text-white transition-colors">
+                  <div className="w-11 h-11 rounded bg-[#f3ede9] text-[#00507d] flex items-center justify-center group-hover:bg-[#00507d] group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm">
                     <span className="material-symbols-outlined text-2xl">
                       {service.icon}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold text-[#6e5a52] uppercase tracking-wider bg-[#f8f2ee] px-2 py-0.5 rounded">
+                  <span className="text-xs font-semibold text-[#6e5a52] uppercase tracking-wider bg-[#f8f2ee] px-2.5 py-1 rounded border border-[#ede7e3]">
                     {service.code}
                   </span>
                 </div>
-                <h3 className="font-display font-semibold text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors">
+                <h3 className="font-display font-semibold text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
                   {service.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#40474f] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#40474f] leading-relaxed line-clamp-3">
                   {service.description}
                 </p>
-              </div>
+              </Link>
 
               <div className="pt-6 mt-4 border-t border-[#ede7e3]/60 flex items-center justify-between">
-                <a
-                  href="#kontak"
-                  className="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline"
+                <Link
+                  href={`/layanan/${service.slug}`}
+                  className="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1.5 group-hover:text-[#0284c7] transition-colors"
                 >
                   <span>{service.actionText}</span>
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1.5 transition-transform duration-300">
                     arrow_forward
                   </span>
-                </a>
+                </Link>
                 <span className="text-[11px] text-[#707881] font-mono">Ariq Fish Hub</span>
               </div>
             </div>
@@ -65,4 +66,3 @@ export default function Services() {
     </section>
   );
 }
-
