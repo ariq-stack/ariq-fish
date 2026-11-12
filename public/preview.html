@@ -424,21 +424,25 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <article class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-sm flex flex-col justify-between group">
+          <article onclick="openArticleModal(0)" class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-warm hover:shadow-warm-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer">
             <div>
               <div class="relative h-48 bg-[#00507d] overflow-hidden">
                 <img 
                   src="images/news-1.png" 
                   onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuC74QdXM_SRbFOv2oZazxCw1nQRE5s0qYUfDvBekNFtC2u6Kqm5wbQciyblR8Dp0zo_qaqsvag2EHtQYoNzsDRonNgQppZtAPgVGeaAqYe_Dw_LkcCiFxOG4uqtQrXQMjIcmWmtpzEK70PUydAR8MUo67gEH_hFayblfYapB9MPueyVsnicaUBnNJakOO2VXO_nZ5k1W5jGf-EN2kSXx-OzvDUZLWoo9JGj1efwDUc';"
                   alt="Dermaga Pelabuhan Pendaratan Ikan" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
                 <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span class="px-2.5 py-0.5 rounded bg-black/40 text-white text-[11px] font-semibold uppercase backdrop-blur-sm">Dinamika Lelang</span>
-                  <span class="text-xs text-white/90 font-mono bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">12 Mei 2026</span>
+                  <span class="px-2.5 py-0.5 rounded bg-black/50 text-white text-[11px] font-semibold uppercase backdrop-blur-sm border border-white/10">Dinamika Lelang</span>
+                  <span class="text-xs text-white/90 font-mono bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">12 Mei 2026</span>
                 </div>
               </div>
               <div class="p-6">
+                <div class="flex items-center gap-1.5 text-[11px] text-[#6e5a52] font-medium mb-2">
+                  <span class="material-symbols-outlined text-xs text-[#c5a059]">schedule</span>
+                  <span>4 mnt baca</span>
+                </div>
                 <h3 class="font-display font-semibold text-base sm:text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
                   Kenaikan Permintaan Ikan Cakalang &amp; Tongkol di Sentra Pesisir Jawa
                 </h3>
@@ -448,28 +452,32 @@
               </div>
             </div>
             <div class="px-6 pb-6 pt-0">
-              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline">
+              <span class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1.5 group-hover:text-[#0284c7]">
                 <span>Baca Selengkapnya</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1.5 transition-transform duration-300">arrow_forward</span>
+              </span>
             </div>
           </article>
 
-          <article class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-sm flex flex-col justify-between group">
+          <article onclick="openArticleModal(1)" class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-warm hover:shadow-warm-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer">
             <div>
               <div class="relative h-48 bg-[#00507d] overflow-hidden">
                 <img 
                   src="images/news-2.png" 
                   onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAgZoCoX5cmOr0ePqxi0oYAyBBUbUqdaGcKXDn4E7QZtZ2UVoAEQ5jhtYsHqdmj9J2BJidKE-_QO1QUkOCTnmquu5HXleDSQipPPBPl9JxVEcS3bp6QtbmFvX6t-IlRR6NFG4E5sDbNnBxz2oIpZcvA9Xgd4C6x5QA9H9lkiQ2fgZgbxiRdV9wkfNfU5PzfrckKWj7VU6sa63B5k8DH2zqvqWZ1jmTi6LS38OWyYss';"
                   alt="Teknologi Rantai Dingin Cold Storage" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
                 <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span class="px-2.5 py-0.5 rounded bg-black/40 text-white text-[11px] font-semibold uppercase backdrop-blur-sm">Standar Mutu</span>
-                  <span class="text-xs text-white/90 font-mono bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">28 April 2026</span>
+                  <span class="px-2.5 py-0.5 rounded bg-black/50 text-white text-[11px] font-semibold uppercase backdrop-blur-sm border border-white/10">Standar Mutu</span>
+                  <span class="text-xs text-white/90 font-mono bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">28 April 2026</span>
                 </div>
               </div>
               <div class="p-6">
+                <div class="flex items-center gap-1.5 text-[11px] text-[#6e5a52] font-medium mb-2">
+                  <span class="material-symbols-outlined text-xs text-[#c5a059]">schedule</span>
+                  <span>5 mnt baca</span>
+                </div>
                 <h3 class="font-display font-semibold text-base sm:text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
                   Pentingnya Air Blast Freezing dalam Mempertahankan Kualitas Ikan Tuna
                 </h3>
@@ -479,28 +487,32 @@
               </div>
             </div>
             <div class="px-6 pb-6 pt-0">
-              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline">
+              <span class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1.5 group-hover:text-[#0284c7]">
                 <span>Baca Selengkapnya</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1.5 transition-transform duration-300">arrow_forward</span>
+              </span>
             </div>
           </article>
 
-          <article class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-sm flex flex-col justify-between group">
+          <article onclick="openArticleModal(2)" class="rounded-lg bg-white border border-[#ede7e3] overflow-hidden shadow-warm hover:shadow-warm-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group cursor-pointer">
             <div>
               <div class="relative h-48 bg-[#00507d] overflow-hidden">
                 <img 
                   src="images/news-3.png" 
                   onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCdBR9t4l3ayfH1cmemF52EPq25rXB2EEJ7hNDzLmcpT1ihWDBeRF2N00SNJ4Fm0rYQTwBvwqerdiHIJo8WIVnTgZ_ZMD53ztLG4FXXPfFckOnyNO1wjjksYR45LJlJVj5wl2zhz_nDZNvoycTgDJCT-jWyX_VMvtD8UKK9suUcI889yo3FMNLLy_qK0I0Z-pGU0H26BfMRZg7IzKrSlvJnQM_Uz7tEkAgUEhtxlb4';"
                   alt="Pengiriman Hasil Laut Pelabuhan" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
                 <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span class="px-2.5 py-0.5 rounded bg-black/40 text-white text-[11px] font-semibold uppercase backdrop-blur-sm">Ekspansi Pasar</span>
-                  <span class="text-xs text-white/90 font-mono bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">15 April 2026</span>
+                  <span class="px-2.5 py-0.5 rounded bg-black/50 text-white text-[11px] font-semibold uppercase backdrop-blur-sm border border-white/10">Ekspansi Pasar</span>
+                  <span class="text-xs text-white/90 font-mono bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">15 April 2026</span>
                 </div>
               </div>
               <div class="p-6">
+                <div class="flex items-center gap-1.5 text-[11px] text-[#6e5a52] font-medium mb-2">
+                  <span class="material-symbols-outlined text-xs text-[#c5a059]">schedule</span>
+                  <span>3 mnt baca</span>
+                </div>
                 <h3 class="font-display font-semibold text-base sm:text-lg text-[#1d1b19] mb-2.5 group-hover:text-[#00507d] transition-colors leading-snug">
                   Ariq Fish Perluas Distribusi Pasokan Segar ke 50+ Jaringan Restoran
                 </h3>
@@ -510,10 +522,10 @@
               </div>
             </div>
             <div class="px-6 pb-6 pt-0">
-              <a href="#kontak" class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1 group-hover:underline">
+              <span class="text-xs font-semibold text-[#00507d] inline-flex items-center gap-1.5 group-hover:text-[#0284c7]">
                 <span>Baca Selengkapnya</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1.5 transition-transform duration-300">arrow_forward</span>
+              </span>
             </div>
           </article>
         </div>
@@ -754,6 +766,76 @@
     </button>
   </div>
 
+  <!-- MODAL DETAIL BACA BERITA SELENGKAPNYA -->
+  <div id="modal-article-preview" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div id="article-modal-box" class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-[#ede7e3] overflow-hidden relative transform transition-all duration-300 scale-95 opacity-0 my-auto">
+      {/* Sticky Header with Close */}
+      <div class="px-6 py-4 bg-[#fef8f4] border-b border-[#ede7e3] flex items-center justify-between sticky top-0 z-20">
+        <div class="flex items-center gap-2">
+          <span id="modal-art-cat" class="px-2.5 py-0.5 rounded bg-[#00507d] text-white text-[11px] font-semibold uppercase tracking-wider">
+            Dinamika Lelang
+          </span>
+          <span class="text-xs text-[#6e5a52] font-mono" id="modal-art-date">12 Mei 2026</span>
+          <span class="text-xs text-[#6e5a52]">•</span>
+          <span class="text-xs text-[#6e5a52] flex items-center gap-1">
+            <span class="material-symbols-outlined text-xs text-[#c5a059]">schedule</span>
+            <span id="modal-art-readtime">4 mnt baca</span>
+          </span>
+        </div>
+        <button id="close-article-btn" class="w-8 h-8 rounded-full bg-white border border-[#ede7e3] text-[#707881] hover:text-[#1d1b19] flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      {/* Scrollable Article Body */}
+      <div class="overflow-y-auto px-6 sm:px-10 py-8 space-y-6 flex-1">
+        <h2 id="modal-art-title" class="font-display font-semibold text-2xl sm:text-3xl lg:text-[34px] text-[#1d1b19] leading-snug">
+          Judul Berita
+        </h2>
+
+        <p id="modal-art-excerpt" class="text-sm sm:text-base text-[#40474f] leading-relaxed border-l-4 border-[#c5a059] pl-4 py-1 italic bg-[#f8f2ee]/80 rounded-r">
+          Ringkasan berita...
+        </p>
+
+        {/* Hero Image */}
+        <div class="rounded-xl overflow-hidden bg-[#00507d]/10 h-64 sm:h-80 w-full relative">
+          <img id="modal-art-img" src="images/news-1.png" alt="Berita" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Highlights */}
+        <div class="p-5 rounded-xl bg-[#f8f2ee] border border-[#c5a059]/40 space-y-2">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#00507d] uppercase tracking-wider">
+            <span class="material-symbols-outlined text-sm text-[#c5a059]">verified</span>
+            <span>Poin Kunci Kajian &amp; Warta</span>
+          </div>
+          <ul id="modal-art-highlights" class="space-y-1.5 text-xs sm:text-sm text-[#40474f]">
+          </ul>
+        </div>
+
+        {/* Paragraphs */}
+        <div id="modal-art-content" class="space-y-4 text-xs sm:text-sm text-[#2d1e18] leading-relaxed sm:leading-[1.8]">
+        </div>
+
+        {/* CTA Bar */}
+        <div class="p-5 rounded-xl bg-gradient-to-r from-[#00507d] to-[#023755] text-white flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+          <div>
+            <h4 class="font-display font-semibold text-base">Tertarik dengan Pasokan Komoditas Ini?</h4>
+            <p class="text-xs text-white/80">Pesan langsung kuota tangkapan laut dengan verifikasi tiket QRIS resmi.</p>
+          </div>
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <button id="modal-art-pesan-btn" class="px-4 py-2 rounded bg-[#c5a059] hover:bg-[#d8b268] text-[#1d1b19] font-semibold text-xs uppercase tracking-wider transition-colors shadow">
+              Pesan Sekarang
+            </button>
+            <button id="modal-art-wa-btn" class="px-4 py-2 rounded bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs uppercase tracking-wider transition-colors">
+              Chat WA
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL PREVIEW LOGIN -->
   <div id="modal-login-preview" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-xl max-w-md w-full p-8 shadow-2xl border border-[#ede7e3] relative animate-in fade-in">
@@ -976,6 +1058,116 @@
   </div>
 
   <script>
+    // News articles data for interactive modal preview
+    const articlesData = [
+      {
+        title: "Kenaikan Permintaan Ikan Cakalang & Tongkol di Sentra Pesisir Jawa",
+        category: "Dinamika Lelang",
+        date: "12 Mei 2026",
+        readTime: "4 mnt baca",
+        image: "images/news-1.png",
+        excerpt: "Analisis stabilitas pasokan tangkapan nelayan pesisir utara dan kesiapan fasilitas serap beku Ariq Fish menghadapi fluktuasi cuaca laut.",
+        highlights: [
+          "Kenaikan permintaan mencapai 28% dibandingkan kuartal sebelumnya dari sektor horeka dan industri pengalengan.",
+          "Armada mitra nelayan Ariq Fish mengoptimalkan pendaratan di pelabuhan Pekalongan, Brondong, dan Banyuwangi.",
+          "Cold storage Ariq Fish berkapasitas 50+ ton per hari menjamin kestabilan harga saat musim ombak tinggi."
+        ],
+        paragraphs: [
+          "Analisis awal kuartal kedua 2026 mencatat lonjakan permintaan ikan pelagis kecil, khususnya Cakalang (Katsuwonus pelamis) dan Tongkol (Euthynnus affinis) hingga 28% di sepanjang jalur pantai utara dan selatan Pulau Jawa. Lonjakan ini didorong oleh peningkatan operasional industri pengalengan serta ekspansi jaringan restoran hidangan laut di kawasan metropolitan Jakarta dan Surabaya.",
+          "Menghadapi dinamika iklim maritim dan periode angin muson barat yang kerap mempengaruhi volume tangkapan harian nelayan tradisional, PT Ariq Fish Samudra Nusantara menerapkan strategi stabilisasi pasokan terpadu. Melalui kemitraan langsung dengan lebih dari 12 sentra pelabuhan tangkapan strategis, hasil pendaratan kapal langsung disortir, dibersihkan, dan dibekukan menggunakan fasilitas pendingin berstandar higienitas tinggi.",
+          "Kunci keberhasilan menjaga suplai di pasar domestik bukan semata-mata pada volume tangkapan saat musim raya, melainkan kemampuan fasilitas cold chain dalam menampung surplus tanpa sedikit pun menurunkan kualitas biologis daging ikan. Dengan sistem pembekuan cepat, kadar kesegaran ikan dapat dipertahankan di atas 99.8% hingga sampai ke tangan pengolah akhir maupun konsumen ritel.",
+          "Bagi para pelaku usaha kuliner dan distributor pangan skala menengah ke atas, stabilitas harga kontrak jangka panjang menjadi nilai tambah krusial. Ariq Fish membuka kuota pemesanan reguler terjadwal dengan jaminan ukuran seragam, sertifikat bebas bahan pengawet kimia berbahaya, dan armada berpendingin khusus yang siap mengantar langsung ke dapur operasional Anda."
+        ]
+      },
+      {
+        title: "Pentingnya Air Blast Freezing dalam Mempertahankan Kualitas Ikan Tuna",
+        category: "Standar Kualitas",
+        date: "28 April 2026",
+        readTime: "5 mnt baca",
+        image: "images/news-2.png",
+        excerpt: "Kajian teknis pembekuan ultra-cepat untuk mencegah kerusakan jaringan seluler daging ikan agar tetap layak sashimi grade saat dipasarkan.",
+        highlights: [
+          "Suhu pembekuan ultra-cepat hingga -45°C mencegah pembentukan kristal es makro perusak serat daging.",
+          "Meminimalkan drip loss sehingga tekstur kenyal dan warna merah alami tuna yellowfin tetap terjaga sempurna.",
+          "Memenuhi standar higienitas ekspor KKP dan sertifikasi HACCP internasional."
+        ],
+        paragraphs: [
+          "Daging ikan tuna sirip kuning (Yellowfin Tuna) merupakan salah satu komoditas bahari paling bernilai tinggi sekaligus paling rentan terhadap degradasi mutu akibat suhu lingkungan. Proses penurunan kualitas kesegaran dapat terjadi hanya dalam hitungan jam jika rantai pendingin tidak dikelola dengan presisi ilmiah sejak ikan dinaikkan ke geladak kapal.",
+          "Dalam metode pembekuan konvensional, perpindahan panas yang lambat memicu terbentuknya kristal es berukuran besar di antara membran sel. Saat ikan dilelehkan (thawing) oleh konsumen, kristal es tajam tersebut merobek dinding sel otot, menyebabkan keluarnya cairan seluler berharga (drip loss). Akibatnya, tekstur daging menjadi lembek, pudar kemerahannya, dan kehilangan cita rasa gurih alaminya.",
+          "Ariq Fish menjawab tantangan ini dengan mengadopsi teknologi Air Blast Freezing (ABF) berdaya tiup sirkulasi udara dingin berkecepatan tinggi pada temperatur ekstrem -40°C hingga -45°C. Melalui proses ini, zona pembekuan kritis (0°C hingga -5°C) terlampaui dalam tempo sangat singkat, mengunci molekul air dalam bentuk kristal mikro halus sehingga keutuhan serat daging tuna tetap terlindungi sempurna seperti saat baru ditangkap.",
+          "Seluruh fasilitas ABF di Marketing Gallery & Distribution Hub PIK 2 beroperasi di bawah protokol ketat Sertifikat Kelayakan Pengolahan (SKP) Kementerian Kelautan dan Perikanan serta HACCP. Hasilnya adalah Tuna Loin Grade A berkualitas prima yang siap disajikan sebagai sashimi di restoran Jepang terkemuka maupun dipanggang menjadi hidangan steak laut berkelas."
+        ]
+      },
+      {
+        title: "Ariq Fish Perluas Distribusi Pasokan Segar ke 50+ Jaringan Restoran",
+        category: "Ekspansi Pasar",
+        date: "15 April 2026",
+        readTime: "3 mnt baca",
+        image: "images/news-3.png",
+        excerpt: "Layanan daily supply menjamin kontinuitas bahan baku hasil laut bebas formalin dengan grading ukuran seragam dan harga kompetitif.",
+        highlights: [
+          "Pasokan harian terintegrasi ke lebih dari 50 grup restoran di Jakarta, Tangerang, dan Bekasi.",
+          "Garansi 100% ikan segar bebas formalin, pemutih, dan bahan kimia berbahaya lainnya.",
+          "Dukungan armada berpendingin terpadu dengan ketepatan waktu pengiriman dini hari sebelum operasional dapur."
+        ],
+        paragraphs: [
+          "PT Ariq Fish Samudra Nusantara secara resmi mengumumkan perluasan portofolio kemitraan rantai pasok harian (daily supply) ke lebih dari 50 grup restoran hidangan laut, hotel berbintang lima, dan katering korporat terkemuka di wilayah Jabodetabek. Langkah ini menandai fase akselerasi bisnis sejak diresmikannya pusat pemasaran utama di kawasan PIK 2, Jakarta Utara.",
+          "Kebutuhan operasional dapur profesional menuntut tiga pilar utama: konsistensi pasokan setiap hari kerja, standarisasi potongan dan berat (grading presisi), serta integritas mutu pangan yang terbukti secara laboratorium. Ariq Fish menerapkan inspeksi kualitas ganda—di pelabuhan pendaratan dan saat tiba di hub distribusi utama PIK 2—guna memastikan seluruh komoditas bebas dari residu pengawet kimia berbahaya.",
+          "Bagi bisnis kuliner, ketidakpastian pasokan adalah risiko fatal yang mempengaruhi reputasi menu. Dengan armada truk pendingin bersuhu terkontrol dan sistem pemesanan online terpadu, para kepala koki (executive chef) dan purchasing manager kini dapat menjadwalkan kebutuhan ikan laut dengan estimasi waktu tiba yang akurat pada dini hari sebelum aktivitas persiapan dapur dimulai.",
+          "Ke depan, program kemitraan horeka ini akan diperluas dengan varietas komoditas eksotis seperti Kakap Merah, Kerapu Macan, serta Cumi Sero segar, yang dapat dipesan langsung baik melalui portal online Ariq Fish maupun layanan konsultasi dedicated account representative kami."
+        ]
+      }
+    ];
+
+    const articleModal = document.getElementById('modal-article-preview');
+    const articleBox = document.getElementById('article-modal-box');
+
+    function openArticleModal(idx) {
+      const art = articlesData[idx];
+      if (!art) return;
+
+      document.getElementById('modal-art-cat').textContent = art.category;
+      document.getElementById('modal-art-date').textContent = art.date;
+      document.getElementById('modal-art-readtime').textContent = art.readTime;
+      document.getElementById('modal-art-title').textContent = art.title;
+      document.getElementById('modal-art-excerpt').textContent = art.excerpt;
+      document.getElementById('modal-art-img').src = art.image;
+
+      const hlList = document.getElementById('modal-art-highlights');
+      hlList.innerHTML = art.highlights.map(h => `<li class="flex items-start gap-2"><span class="material-symbols-outlined text-sm text-[#00507d] mt-0.5 shrink-0">check_circle</span><span>${h}</span></li>`).join('');
+
+      const contentDiv = document.getElementById('modal-art-content');
+      contentDiv.innerHTML = art.paragraphs.map(p => `<p>${p}</p>`).join('');
+
+      document.getElementById('modal-art-pesan-btn').onclick = () => {
+        closeArticleModal();
+        orderModal?.classList.remove('hidden');
+      };
+
+      document.getElementById('modal-art-wa-btn').onclick = () => {
+        window.open('https://wa.me/6281234567890?text=' + encodeURIComponent('Halo Admin Ariq Fish, saya ingin berkonsultasi tentang: ' + art.title), '_blank');
+      };
+
+      articleModal.classList.remove('hidden');
+      setTimeout(() => {
+        articleBox.classList.remove('scale-95', 'opacity-0');
+        articleBox.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeArticleModal() {
+      articleBox.classList.add('scale-95', 'opacity-0');
+      articleBox.classList.remove('scale-100', 'opacity-100');
+      setTimeout(() => {
+        articleModal.classList.add('hidden');
+      }, 250);
+    }
+
+    document.getElementById('close-article-btn')?.addEventListener('click', closeArticleModal);
+    articleModal?.addEventListener('click', (e) => {
+      if (e.target === articleModal) closeArticleModal();
+    });
+
     // Preview Switcher scripts
     const loginModal = document.getElementById('modal-login-preview');
     const dashboardModal = document.getElementById('modal-dashboard-preview');

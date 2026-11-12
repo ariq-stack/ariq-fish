@@ -52,6 +52,10 @@ Daftar kebutuhan penambahan fitur di masa mendatang:
 - **Step 4 - Deploy & Pemeliharaan:**
   - Halaman 404 kustom bertema Ariq Fish.
   - Pembungkusan `useSearchParams()` pada halaman `/login` dengan `<Suspense>` boundary untuk mencegah kegagalan prerendering static Next.js di Vercel build.
+  - Penambahan Halaman Detail Berita Sendiri (`/berita/[slug]`) dan Arsip Berita (`/berita`) dengan animasi baca interaktif:
+    - Indikator progres baca (*reading progress bar*) di bagian atas yang teranimasi halus saat menggulir (*scroll*).
+    - Animasi transisi kartu (*hover zoom 108%*, *lift translateY*, *glow badge*, dan pergeseran ikon panah).
+    - Tipografi *Heritage Editorial* lengkap dengan *drop cap*, *pull-quote* pembatas emas, kotak poin kunci (*highlights*), dan tombol aksi cepat (*Share WhatsApp*, *Salin Tautan*, *Pesan Komoditas Ini*).
   - Panduan deploy Vercel di `/documentation/DEPLOYMENT.md`.
   - Log pemeliharaan di `/documentation/MAINTENANCE.md`.
   - Pembaruan status di `/documentation/PROGRESS.md`.

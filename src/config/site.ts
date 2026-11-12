@@ -16,6 +16,11 @@ export interface NewsItem {
   excerpt: string;
   thumbnail: string;
   readTime: string;
+  author?: string;
+  authorRole?: string;
+  tags?: string[];
+  highlights?: string[];
+  content?: string[];
 }
 
 export interface ProductItem {
@@ -196,9 +201,23 @@ export const siteConfig: SiteConfig = {
       category: "Dinamika Lelang",
       date: "12 Mei 2026",
       readTime: "4 mnt baca",
+      author: "Dewan Redaksi Ariq Fish",
+      authorRole: "Analis Pasar & Rantai Pasok Maritim",
+      tags: ["Pasar Pesisir", "Cakalang", "Tongkol", "Cold Chain", "Ekspor"],
       excerpt:
         "Analisis stabilitas pasokan tangkapan nelayan pesisir utara dan kesiapan fasilitas serap beku Ariq Fish menghadapi fluktuasi cuaca laut.",
       thumbnail: "/images/news-1.png",
+      highlights: [
+        "Kenaikan permintaan mencapai 28% dibandingkan kuartal sebelumnya dari sektor horeka dan industri pengalengan.",
+        "Armada mitra nelayan Ariq Fish mengoptimalkan pendaratan di pelabuhan Pekalongan, Brondong, dan Banyuwangi.",
+        "Cold storage Ariq Fish berkapasitas 50+ ton per hari menjamin kestabilan harga saat musim gelombang tinggi.",
+      ],
+      content: [
+        "Analisis awal kuartal kedua 2026 mencatat lonjakan permintaan ikan pelagis kecil, khususnya Cakalang (Katsuwonus pelamis) dan Tongkol (Euthynnus affinis) hingga 28% di sepanjang jalur pantai utara dan selatan Pulau Jawa. Lonjakan ini didorong oleh peningkatan operasional industri pengalengan serta ekspansi jaringan restoran hidangan laut di kawasan metropolitan Jakarta dan Surabaya.",
+        "Menghadapi dinamika iklim maritim dan periode angin muson barat yang kerap mempengaruhi volume tangkapan harian nelayan tradisional, PT Ariq Fish Samudra Nusantara menerapkan strategi stabilisasi pasokan terpadu. Melalui kemitraan langsung dengan lebih dari 12 sentra pelabuhan tangkapan strategis, hasil pendaratan kapal langsung disortir, dibersihkan, dan dibekukan menggunakan fasilitas pendingin berstandar higienitas tinggi.",
+        "Kunci keberhasilan menjaga suplai di pasar domestik bukan semata-mata pada volume tangkapan saat musim raya, melainkan kemampuan fasilitas cold chain dalam menampung surplus tanpa sedikit pun menurunkan kualitas biologis daging ikan. Dengan sistem pembekuan cepat, kadar kesegaran ikan dapat dipertahankan di atas 99.8% hingga sampai ke tangan pengolah akhir maupun konsumen ritel.",
+        "Bagi para pelaku usaha kuliner dan distributor pangan skala menengah ke atas, stabilitas harga kontrak jangka panjang menjadi nilai tambah krusial. Ariq Fish membuka kuota pemesanan reguler terjadwal dengan jaminan ukuran seragam, sertifikat bebas bahan pengawet kimia berbahaya, dan armada berpendingin khusus yang siap mengantar langsung ke dapur operasional Anda.",
+      ],
     },
     {
       id: "news-2",
@@ -207,9 +226,23 @@ export const siteConfig: SiteConfig = {
       category: "Standar Kualitas",
       date: "28 April 2026",
       readTime: "5 mnt baca",
+      author: "Divisi Quality Assurance Ariq Fish",
+      authorRole: "Spesialis Teknologi Pasca-Panen Ikan Laut",
+      tags: ["Teknologi Pendinginan", "Air Blast Freezing", "Tuna Sashimi", "HACCP"],
       excerpt:
         "Kajian teknis pembekuan ultra-cepat untuk mencegah kerusakan jaringan seluler daging ikan agar tetap layak sashimi grade saat dipasarkan.",
       thumbnail: "/images/news-2.png",
+      highlights: [
+        "Suhu pembekuan ultra-cepat hingga -45°C mencegah pembentukan kristal es makro perusak serat daging.",
+        "Meminimalkan drip loss sehingga tekstur kenyal dan warna merah alami tuna yellowfin tetap terjaga sempurna.",
+        "Memenuhi standar higienitas ekspor KKP dan sertifikasi HACCP internasional.",
+      ],
+      content: [
+        "Daging ikan tuna sirip kuning (Yellowfin Tuna) merupakan salah satu komoditas bahari paling bernilai tinggi sekaligus paling rentan terhadap degradasi mutu akibat suhu lingkungan. Proses penurunan kualitas kesegaran dapat terjadi hanya dalam hitungan jam jika rantai pendingin tidak dikelola dengan presisi ilmiah sejak ikan dinaikkan ke geladak kapal.",
+        "Dalam metode pembekuan konvensional, perpindahan panas yang lambat memicu terbentuknya kristal es berukuran besar di antara membran sel. Saat ikan dilelehkan (thawing) oleh konsumen, kristal es tajam tersebut merobek dinding sel otot, menyebabkan keluarnya cairan seluler berharga (drip loss). Akibatnya, tekstur daging menjadi lembek, pudar kemerahannya, dan kehilangan cita rasa gurih alaminya.",
+        "Ariq Fish menjawab tantangan ini dengan mengadopsi teknologi Air Blast Freezing (ABF) berdaya tiup sirkulasi udara dingin berkecepatan tinggi pada temperatur ekstrem -40°C hingga -45°C. Melalui proses ini, zona pembekuan kritis (0°C hingga -5°C) terlampaui dalam tempo sangat singkat, mengunci molekul air dalam bentuk kristal mikro halus sehingga keutuhan serat daging tuna tetap terlindungi sempurna seperti saat baru ditangkap.",
+        "Seluruh fasilitas ABF di Marketing Gallery & Distribution Hub PIK 2 beroperasi di bawah protokol ketat Sertifikat Kelayakan Pengolahan (SKP) Kementerian Kelautan dan Perikanan serta HACCP. Hasilnya adalah Tuna Loin Grade A berkualitas prima yang siap disajikan sebagai sashimi di restoran Jepang terkemuka maupun dipanggang menjadi hidangan steak laut berkelas.",
+      ],
     },
     {
       id: "news-3",
@@ -218,9 +251,23 @@ export const siteConfig: SiteConfig = {
       category: "Ekspansi Pasar",
       date: "15 April 2026",
       readTime: "3 mnt baca",
+      author: "Tim Komunikasi Perusahaan",
+      authorRole: "Hubungan Mitra & Distribusi Horeka",
+      tags: ["Kemitraan Restoran", "Distribusi Harian", "Bebas Formalin", "PIK 2 Hub"],
       excerpt:
         "Layanan daily supply menjamin kontinuitas bahan baku hasil laut bebas formalin dengan grading ukuran seragam dan harga kompetitif.",
       thumbnail: "/images/news-3.png",
+      highlights: [
+        "Pasokan harian terintegrasi ke lebih dari 50 grup restoran di Jakarta, Tangerang, dan Bekasi.",
+        "Garansi 100% ikan segar bebas formalin, pemutih, dan bahan kimia berbahaya lainnya.",
+        "Dukungan armada berpendingin terpadu dengan ketepatan waktu pengiriman dini hari sebelum operasional dapur.",
+      ],
+      content: [
+        "PT Ariq Fish Samudra Nusantara secara resmi mengumumkan perluasan portofolio kemitraan rantai pasok harian (daily supply) ke lebih dari 50 grup restoran hidangan laut, hotel berbintang lima, dan katering korporat terkemuka di wilayah Jabodetabek. Langkah ini menandai fase akselerasi bisnis sejak diresmikannya pusat pemasaran utama di kawasan PIK 2, Jakarta Utara.",
+        "Kebutuhan operasional dapur profesional menuntut tiga pilar utama: konsistensi pasokan setiap hari kerja, standarisasi potongan dan berat (grading presisi), serta integritas mutu pangan yang terbukti secara laboratorium. Ariq Fish menerapkan inspeksi kualitas ganda—di pelabuhan pendaratan dan saat tiba di hub distribusi utama PIK 2—guna memastikan seluruh komoditas bebas dari residu pengawet kimia berbahaya.",
+        "Bagi bisnis kuliner, ketidakpastian pasokan adalah risiko fatal yang mempengaruhi reputasi menu. Dengan armada truk pendingin bersuhu terkontrol dan sistem pemesanan online terpadu, para kepala koki (executive chef) dan purchasing manager kini dapat menjadwalkan kebutuhan ikan laut dengan estimasi waktu tiba yang akurat pada dini hari sebelum aktivitas persiapan dapur dimulai.",
+        "Ke depan, program kemitraan horeka ini akan diperluas dengan varietas komoditas eksotis seperti Kakap Merah, Kerapu Macan, serta Cumi Sero segar, yang dapat dipesan langsung baik melalui portal online Ariq Fish maupun layanan konsultasi dedicated account representative kami.",
+      ],
     },
   ],
   products: [
