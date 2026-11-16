@@ -54,6 +54,7 @@
       background-color: #fef8f4;
       color: #1d1b19;
       font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
     }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', Georgia, serif;
@@ -69,6 +70,67 @@
       line-height: 1;
       display: inline-block;
       vertical-align: middle;
+    }
+
+    /* === JS ANIMATION ENGINE STYLES === */
+    /* Scroll Reveal */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-item.revealed {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* 3D Tilt Card */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+      will-change: transform;
+    }
+
+    /* Button Ripple Wave */
+    .btn-ripple {
+      position: relative;
+      overflow: hidden;
+    }
+    .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: rippleAnim 0.6s linear;
+      background-color: rgba(255, 255, 255, 0.38);
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Maritime Floating Bobbing */
+    @keyframes maritimeFloat {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+    .maritime-float {
+      animation: maritimeFloat 4s ease-in-out infinite;
+    }
+
+    /* Navbar Dynamic Scroll Elevation */
+    header.header-scrolled {
+      height: 4.25rem !important;
+      background-color: rgba(254, 248, 244, 0.98) !important;
+      box-shadow: 0 4px 20px -2px rgba(45, 30, 24, 0.1) !important;
+      border-color: #dfd7d1 !important;
     }
   </style>
 </head>
@@ -88,9 +150,9 @@
       </a>
       <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-[#40474f]">
         <a href="#beranda" class="hover:text-[#00507d] transition-colors">Beranda</a>
-        <a href="katalog.html" class="text-[#00507d] font-bold hover:underline transition-colors flex items-center gap-1 bg-[#f3ede9] px-3 py-1 rounded-full border border-[#ede7e3]">
-          <span class="material-symbols-outlined text-base">shopping_cart</span>
-          <span>Katalog &amp; Checkout (24 Ikan)</span>
+        <a href="katalog.html" class="hover:text-[#00507d] transition-colors flex items-center gap-1.5 font-semibold text-[#00507d]">
+          <span class="material-symbols-outlined text-lg">shopping_cart</span>
+          <span>Katalog Produk</span>
         </a>
         <a href="#tentang-kami" class="hover:text-[#00507d] transition-colors">Tentang Kami</a>
         <a href="#layanan" class="hover:text-[#00507d] transition-colors">Layanan</a>
@@ -98,9 +160,9 @@
         <a href="#kontak" class="hover:text-[#00507d] transition-colors">Kontak</a>
       </nav>
       <div class="hidden md:flex items-center gap-4">
-        <a href="katalog.html" class="text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded bg-[#00507d] hover:bg-[#0369a1] text-white transition-all shadow-sm flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-base">shopping_cart_checkout</span>
-          <span>Beli Ikan (Katalog Penuh)</span>
+        <a href="#kontak" class="text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded bg-[#00507d] hover:bg-[#0369a1] text-white transition-all shadow-sm flex items-center gap-1.5 btn-ripple">
+          <span class="material-symbols-outlined text-base">call</span>
+          <span>Hubungi Penjualan</span>
         </a>
       </div>
       <button id="menu-toggle" class="md:hidden p-2 rounded text-[#1d1b19]" aria-label="Toggle menu">
@@ -139,33 +201,33 @@
               Didirikan oleh keluarga Ariq pada tahun 1950, menghubungkan tangkapan segar ribuan nelayan Nusantara ke pasar industri pengolahan, jaringan restoran premium, serta kargo ekspor dengan teknologi cold chain standar internasional.
             </p>
             <div class="pt-2 flex flex-wrap items-center gap-4">
-              <a href="katalog.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#00507d] text-white font-semibold text-sm hover:bg-[#0369a1] transition-all shadow-md group">
-                <span>Beli &amp; Checkout Ikan (24 Jenis Lengkap)</span>
+              <a href="katalog.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#00507d] text-white font-semibold text-sm hover:bg-[#0369a1] transition-all shadow-md group btn-ripple">
+                <span>Beli &amp; Checkout Ikan</span>
                 <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">shopping_cart_checkout</span>
               </a>
-              <a href="#layanan" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#ede7e3] text-[#1d1b19] font-semibold text-sm hover:bg-[#e7e1dd] transition-colors shadow-sm">
+              <a href="#layanan" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#ede7e3] text-[#1d1b19] font-semibold text-sm hover:bg-[#e7e1dd] transition-colors shadow-sm btn-ripple">
                 <span class="material-symbols-outlined text-base text-[#6e5a52]">inventory_2</span>
                 <span>Katalog Layanan &amp; Komoditas</span>
               </a>
             </div>
             <div class="pt-4 grid grid-cols-3 gap-2.5 sm:gap-3 items-stretch">
-              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full">
-                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">50+ Ton</span>
+              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full reveal-item">
+                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap"><span class="counter-num" data-target="50" data-suffix="+ Ton">50+ Ton</span></span>
                 <span class="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">Kapasitas / Hari</span>
               </div>
-              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full">
-                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">12+ Hub</span>
+              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full reveal-item" style="transition-delay: 100ms;">
+                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap"><span class="counter-num" data-target="12" data-suffix="+ Hub">12+ Hub</span></span>
                 <span class="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">Sentra Pelabuhan</span>
               </div>
-              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full">
-                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap">99.8%</span>
+              <div class="p-3 sm:p-3.5 rounded bg-[#f8f2ee] border border-[#ede7e3] shadow-sm flex flex-col justify-between h-full reveal-item" style="transition-delay: 200ms;">
+                <span class="block font-display font-bold text-lg sm:text-2xl text-[#00507d] tracking-tight whitespace-nowrap"><span class="counter-num" data-target="99.8" data-decimal="1" data-suffix="%">99.8%</span></span>
                 <span class="block text-[10px] sm:text-[11px] font-semibold text-[#6e5a52] uppercase tracking-wider mt-1 leading-snug">Kesegaran Terjaga</span>
               </div>
             </div>
           </div>
 
-          <div class="lg:col-span-6 relative">
-            <div class="relative p-2.5 rounded-lg bg-white border border-[#ede7e3] shadow-xl">
+          <div class="lg:col-span-6 relative reveal-item" style="transition-delay: 150ms;">
+            <div class="relative p-2.5 rounded-lg bg-white border border-[#ede7e3] shadow-xl tilt-card">
               <div class="relative h-[400px] sm:h-[460px] w-full overflow-hidden rounded bg-[#dfd9d5]">
                 <img 
                   src="images/hero-fish-platter.png" 
@@ -858,9 +920,9 @@
     <button id="view-landing-btn" class="px-3 py-1.5 rounded-full bg-white text-[#00507d] shadow-sm">
       Landing Page
     </button>
-    <a href="katalog.html" class="px-3.5 py-1.5 rounded-full bg-[#c5a059] text-[#1d1b19] font-bold shadow-md hover:bg-[#d8b268] transition-all flex items-center gap-1">
+    <a href="katalog.html" class="px-3.5 py-1.5 rounded-full bg-[#c5a059] text-[#1d1b19] font-bold shadow-md hover:bg-[#d8b268] transition-all flex items-center gap-1 btn-ripple">
       <span class="material-symbols-outlined text-sm">shopping_cart</span>
-      <span>Halaman Katalog (24 Ikan)</span>
+      <span>Katalog Produk</span>
     </a>
     <button id="view-order-btn" class="px-3 py-1.5 rounded-full hover:bg-[#0369a1] text-white transition-colors">
       Tiket QRIS
@@ -1834,6 +1896,122 @@
         form.reset();
         setTimeout(() => successMsg.classList.add('hidden'), 5000);
       }, 1000);
+    });
+
+    // ==========================================
+    // JS ANIMATION ENGINE (Ariq Fish Interactive)
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Counter Animation for Metrics (50+ Ton, 12+ Hub, 99.8%)
+      const counters = document.querySelectorAll('.counter-num');
+      const counterObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const targetVal = parseFloat(el.getAttribute('data-target'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            const decimal = parseInt(el.getAttribute('data-decimal') || '0', 10);
+            const duration = 1400; // ms
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease-out cubic curve
+              const ease = 1 - Math.pow(1 - progress, 3);
+              const currentVal = targetVal * ease;
+
+              el.textContent = (decimal > 0 ? currentVal.toFixed(decimal) : Math.floor(currentVal)) + suffix;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                el.textContent = (decimal > 0 ? targetVal.toFixed(decimal) : targetVal) + suffix;
+              }
+            }
+            requestAnimationFrame(updateCounter);
+            obs.unobserve(el);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      counters.forEach(counter => counterObserver.observe(counter));
+
+      // 2. Smooth Scroll Reveal (IntersectionObserver)
+      const revealElements = document.querySelectorAll(
+        'section > div, .grid > div, article, .reveal-item'
+      );
+      revealElements.forEach((el, index) => {
+        if (!el.classList.contains('reveal-item')) {
+          el.classList.add('reveal-item');
+        }
+      });
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+      document.querySelectorAll('.reveal-item').forEach(el => revealObserver.observe(el));
+
+      // 3. Interactive 3D Card Tilt
+      const tiltElements = document.querySelectorAll('.tilt-card, [onclick^="openServiceModal"], [onclick^="openNewsModal"]');
+      tiltElements.forEach(card => {
+        card.style.transition = 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease';
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -5;
+          const rotateY = ((x - centerX) / centerX) * 5;
+          card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        });
+      });
+
+      // 4. Click Ripple Wave Animation
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-ripple, button:not(#menu-toggle), a.bg-[#00507d]');
+        if (!btn) return;
+        const rect = btn.getBoundingClientRect();
+        const circle = document.createElement('span');
+        const diameter = Math.max(rect.width, rect.height);
+        const radius = diameter / 2;
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - rect.left - radius}px`;
+        circle.style.top = `${e.clientY - rect.top - radius}px`;
+        circle.classList.add('ripple-wave');
+
+        const existingRipple = btn.querySelector('.ripple-wave');
+        if (existingRipple) existingRipple.remove();
+
+        btn.style.position = 'relative';
+        btn.style.overflow = 'hidden';
+        btn.appendChild(circle);
+
+        setTimeout(() => circle.remove(), 650);
+      });
+
+      // 5. Dynamic Sticky Navbar on Scroll
+      const header = document.querySelector('header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 25) {
+            header.classList.add('header-scrolled');
+          } else {
+            header.classList.remove('header-scrolled');
+          }
+        }, { passive: true });
+      }
     });
   </script>
 </body>

@@ -89,7 +89,7 @@ export default function Hero() {
                 href="/pesan"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#00507d] text-white font-semibold text-sm hover:bg-[#0369a1] transition-all shadow-md group"
               >
-                <span>Beli &amp; Checkout Ikan (24 Jenis)</span>
+                <span>Beli &amp; Checkout Ikan</span>
                 <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
                   shopping_cart_checkout
                 </span>
