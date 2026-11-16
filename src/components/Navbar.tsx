@@ -29,7 +29,7 @@ export default function Navbar() {
     { label: "Beranda", href: "/#beranda" },
     { label: "Tentang Kami", href: "/#tentang-kami" },
     { label: "Layanan", href: "/#layanan" },
-    { label: "Pesan Ikan", href: "/pesan" },
+    { label: "Katalog & Checkout", href: "/pesan" },
     { label: "Warta Pasar", href: "/#warta" },
     { label: "Kontak & Lokasi", href: "/#kontak" },
   ];
