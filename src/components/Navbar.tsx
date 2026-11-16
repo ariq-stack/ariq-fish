@@ -16,7 +16,7 @@ export default function Navbar() {
           setUser(data.user);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   const handleLogout = async () => {
