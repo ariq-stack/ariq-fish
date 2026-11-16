@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Ikan Segar &amp; Checkout Online | Ariq Fish (Est. 1950)</title>
+  <meta name="description" content="Pilihan 24 jenis komoditas ikan laut segar Nusantara: Tuna, Cakalang, Tongkol, Tenggiri, Kakap, Kerapu, Cumi Sero, Udang Windu, Salmon, dll. dengan sistem checkout QRIS resmi.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00507d',
+            secondary: '#6e5a52',
+            espresso: '#2D1E18',
+            gold: '#c5a059',
+            parchment: '#fef8f4',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #fef8f4;
+      font-family: 'Inter', sans-serif;
+      color: #1d1b19;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR KHUSUS KATALOG -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fef8f4]/95 backdrop-blur-md border-b border-[#ede7e3] shadow-[0_1px_8px_rgba(45,30,24,0.05)]">
+    <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded bg-[#00507d] flex items-center justify-center text-white shadow-sm">
+            <span class="material-symbols-outlined text-2xl">anchor</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-semibold text-xl text-[#1d1b19] leading-tight">Ariq Fish</span>
+            <span class="text-[10px] font-semibold text-[#6e5a52] uppercase tracking-widest hidden sm:block">Katalog Resmi &amp; Checkout Online</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f3ede9] text-[#00507d] text-xs font-semibold border border-[#ede7e3]">
+          <span class="material-symbols-outlined text-sm text-[#c5a059]">verified</span>
+          <span>24 Pilihan Ikan Segar</span>
+        </span>
+        <a href="index.html" class="px-4 py-2 rounded-lg bg-white border border-[#ede7e3] hover:bg-[#ede7e3] text-xs font-semibold text-[#1d1b19] uppercase tracking-wider transition-colors shadow-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-base text-[#00507d]">arrow_back</span>
+          <span>Kembali ke Beranda</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: DEDICATED FISH STOREFRONT -->
+  <main class="flex-grow pt-28 pb-24">
+    <div class="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-12">
+      <!-- Breadcrumb & Header -->
+      <div class="mb-8">
+        <nav class="flex items-center gap-2 text-xs text-[#6e5a52] mb-3">
+          <a href="index.html" class="hover:text-[#00507d] transition-colors flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">home</span>
+            <span>Beranda</span>
+          </a>
+          <span>/</span>
+          <span class="text-[#1d1b19] font-medium">Halaman Khusus Katalog Ikan &amp; Checkout</span>
+        </nav>
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#00507d] text-white text-xs font-semibold uppercase tracking-wider mb-2 shadow-sm">
+              <span class="material-symbols-outlined text-sm text-[#94ccff]">set_meal</span>
+              <span>Katalog Komoditas Ikan Lengkap</span>
+            </span>
+            <h1 class="font-display font-semibold text-3xl sm:text-4xl text-[#1d1b19] leading-tight">
+              Pilihan Hasil Laut Segar &amp; Checkout QRIS
+            </h1>
+            <p class="text-xs sm:text-sm text-[#40474f] mt-1.5 max-w-2xl leading-relaxed">
+              Daftar lengkap 24 jenis ikan laut segar tangkapan nelayan Nusantara. Pilih berat kilogram yang dibutuhkan dan checkout langsung dengan verifikasi pembayaran QRIS resmi.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-[#6e5a52] font-semibold bg-white p-3 rounded-lg border border-[#ede7e3] shadow-sm shrink-0">
+            <span class="material-symbols-outlined text-base text-[#00507d]">verified</span>
+            <span>Rantai Pasok -25°C • Bebas Pengawet • Garansi Segar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Columns: Catalog Grid (8 cols) & Sticky Checkout Box (4 cols) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Search, Filter & 24 Fish Cards -->
+        <div class="lg:col-span-7 xl:col-span-8 space-y-6">
+          <!-- Search & Filter Toolbar -->
+          <div class="p-4 sm:p-5 rounded-xl bg-white border border-[#ede7e3] shadow-sm space-y-4">
+            <!-- Search Input -->
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[#707881] text-xl">
+                search
+              </span>
+              <input
+                id="search-fish-input"
+                type="text"
+                placeholder="Cari jenis ikan (Tuna, Cakalang, Kakap, Kerapu, Tenggiri, Udang, Salmon...)"
+                class="w-full pl-11 pr-4 py-2.5 rounded-lg bg-[#f8f2ee] border border-[#ede7e3] text-sm text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]"
+              >
+            </div>
+
+            <!-- Category Pills -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-1" id="cat-filter-buttons">
+              <button type="button" onclick="filterFish('Semua')" class="cat-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#00507d] text-white shadow-sm whitespace-nowrap">Semua (24)</button>
+              <button type="button" onclick="filterFish('Ikan Laut Pelagis')" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#f8f2ee] text-[#6e5a52] hover:bg-[#ede7e3] whitespace-nowrap">Ikan Pelagis (9)</button>
+              <button type="button" onclick="filterFish('Ikan Demersal / Karang')" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#f8f2ee] text-[#6e5a52] hover:bg-[#ede7e3] whitespace-nowrap">Ikan Karang &amp; Demersal (7)</button>
+              <button type="button" onclick="filterFish('Cephalopoda & Crustacea')" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#f8f2ee] text-[#6e5a52] hover:bg-[#ede7e3] whitespace-nowrap">Cumi, Udang &amp; Kepiting (5)</button>
+              <button type="button" onclick="filterFish('Fillet & Olahan')" class="cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#f8f2ee] text-[#6e5a52] hover:bg-[#ede7e3] whitespace-nowrap">Fillet &amp; Salmon (3)</button>
+            </div>
+          </div>
+
+          <!-- Fish Cards Grid -->
+          <div id="fish-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Right: Sticky Checkout Drawer -->
+        <div id="checkout-box" class="lg:col-span-5 xl:col-span-4 sticky top-24">
+          <div class="bg-white rounded-2xl border border-[#ede7e3] p-6 shadow-warm space-y-5">
+            <div class="flex items-center justify-between pb-3 border-b border-[#ede7e3]">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded bg-[#00507d] text-white flex items-center justify-center">
+                  <span class="material-symbols-outlined text-lg">shopping_cart</span>
+                </div>
+                <div>
+                  <h2 class="font-display font-semibold text-base text-[#1d1b19]">Keranjang &amp; Checkout</h2>
+                  <span id="cart-item-count" class="text-[11px] text-[#6e5a52]">1 komoditas dipilih</span>
+                </div>
+              </div>
+              <span id="preview-total-kg-badge" class="px-2 py-0.5 rounded bg-[#f8f2ee] border border-[#ede7e3] text-xs font-bold text-[#00507d] font-mono">5 kg</span>
+            </div>
+
+            <!-- Item List -->
+            <div id="preview-cart-items" class="space-y-2.5 max-h-56 overflow-y-auto pr-1 text-xs">
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="pt-3 border-t border-[#ede7e3] space-y-2 text-xs">
+              <div class="flex justify-between text-[#6e5a52]">
+                <span>Total Berat Komoditas:</span>
+                <span id="summary-total-kg" class="font-semibold text-[#1d1b19]">5 kg</span>
+              </div>
+              <div class="flex justify-between text-[#6e5a52]">
+                <span>Estimasi Biaya Kirim:</span>
+                <span class="text-[#15803d] font-semibold">Dikonfirmasi Admin</span>
+              </div>
+              <div class="pt-2 border-t border-[#ede7e3] flex justify-between items-baseline">
+                <span class="font-display font-semibold text-sm text-[#1d1b19]">Total Pembayaran:</span>
+                <span id="summary-grand-total" class="font-display font-bold text-xl text-[#00507d]">Rp 475.000</span>
+              </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <form id="standaloneCheckoutForm" class="space-y-3 pt-3 border-t border-[#ede7e3]">
+              <span class="text-xs font-bold text-[#00507d] uppercase tracking-wider block">
+                Data Pengiriman &amp; Penerima:
+              </span>
+              <div>
+                <label class="block text-[11px] font-semibold text-[#1d1b19] mb-1">Nama Pemesan / Restoran / PT *</label>
+                <input id="checkout-name" type="text" required placeholder="Contoh: Pak Budi (Resto Segar Bahari)" class="w-full px-3 py-2 rounded bg-[#f8f2ee] border border-[#ede7e3] text-xs text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold text-[#1d1b19] mb-1">Nomor WhatsApp Aktif *</label>
+                <input id="checkout-phone" type="tel" required placeholder="081234567890" class="w-full px-3 py-2 rounded bg-[#f8f2ee] border border-[#ede7e3] text-xs text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold text-[#1d1b19] mb-1">Alamat Pengiriman Lengkap *</label>
+                <textarea id="checkout-address" required rows="2" placeholder="Nama jalan, nomor rumah/ruko, kecamatan, kota..." class="w-full px-3 py-2 rounded bg-[#f8f2ee] border border-[#ede7e3] text-xs text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]"></textarea>
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold text-[#1d1b19] mb-1">Catatan Tambahan (Opsional)</label>
+                <input id="checkout-notes" type="text" placeholder="Contoh: Kirim jam 07:00 pagi dengan es basah" class="w-full px-3 py-2 rounded bg-[#f8f2ee] border border-[#ede7e3] text-xs text-[#1d1b19] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#00507d]">
+              </div>
+              <div class="p-2.5 rounded bg-[#f8f2ee] border border-[#ede7e3] flex items-center gap-2 text-[10px] text-[#6e5a52]">
+                <span class="material-symbols-outlined text-base text-[#00507d]">qr_code_2</span>
+                <span>Pembayaran resmi QRIS Nasional (BCA, Mandiri, BRI, BNI, GoPay, OVO)</span>
+              </div>
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-[#00507d] hover:bg-[#0369a1] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 group">
+                <span class="material-symbols-outlined text-base">shopping_cart_checkout</span>
+                <span>Checkout &amp; Bayar QRIS</span>
+                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL TIKET PEMBAYARAN QRIS -->
+  <div id="modal-order-preview" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-[#f8f2ee] rounded-2xl max-w-3xl w-full max-h-[92vh] shadow-2xl border border-[#ede7e3] flex flex-col overflow-hidden my-auto animate-fade-in">
+      <div class="h-16 bg-[#00507d] text-white px-6 flex items-center justify-between shrink-0 shadow-md">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded bg-[#f5dad0] text-[#00507d] flex items-center justify-center">
+            <span class="material-symbols-outlined text-xl">confirmation_number</span>
+          </div>
+          <div>
+            <span class="font-display font-semibold text-base block leading-tight">Tiket Pesanan Ariq Fish</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#cbe4ff]">Sistem Pembayaran QRIS Resmi</span>
+          </div>
+        </div>
+        <button id="close-order-btn" class="p-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <div class="p-5 sm:p-7 overflow-y-auto space-y-6">
+        <!-- Status Box -->
+        <div class="p-4 rounded-xl bg-[#dcfce7] border-l-4 border-[#15803d] flex items-start gap-3 text-xs">
+          <span class="material-symbols-outlined text-2xl text-[#15803d]">check_circle</span>
+          <div>
+            <h4 class="font-bold text-[#15803d] text-sm">Pesanan Berhasil Dibuat!</h4>
+            <p class="text-[#14532d] mt-0.5 leading-relaxed">
+              Silakan lakukan pembayaran sesuai nominal di bawah dengan memindai barcode QRIS resmi. Setelah membayar, konfirmasikan ke admin via WhatsApp untuk percepatan proses pengiriman.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+          <!-- QRIS Image Box -->
+          <div class="md:col-span-5 bg-white p-5 rounded-xl border border-[#ede7e3] text-center space-y-3 shadow-sm">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#00507d] block">
+              Scan Barcode QRIS Resmi
+            </span>
+            <div class="relative w-full max-w-[220px] mx-auto rounded-lg overflow-hidden border border-[#ede7e3] p-1 bg-white">
+              <img src="images/qris.jpg" alt="QRIS Merchant Ariq Fish" class="w-full h-auto object-contain">
+            </div>
+            <div class="p-3 rounded-lg bg-[#f8f2ee] border border-[#ede7e3]">
+              <span class="text-[10px] text-[#6e5a52] uppercase block font-semibold">Total Tagihan:</span>
+              <span id="modal-qris-total" class="font-display font-bold text-xl text-[#00507d] font-mono">Rp 0</span>
+            </div>
+            <a id="modal-wa-btn" href="#" target="_blank" class="w-full py-2.5 rounded-lg bg-[#25d366] text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm hover:bg-[#20bd5a] transition-colors">
+              <span class="material-symbols-outlined text-base">chat</span>
+              <span>Konfirmasi via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Order Summary Details -->
+          <div class="md:col-span-7 bg-white p-5 rounded-xl border border-[#ede7e3] space-y-4 shadow-sm text-xs">
+            <h4 class="font-display font-semibold text-sm text-[#1d1b19] border-b pb-2">
+              Rincian Komoditas Ikan Dipesan:
+            </h4>
+            <div id="modal-items-breakdown" class="divide-y divide-[#ede7e3] max-h-48 overflow-y-auto pr-1">
+            </div>
+            <div class="p-3 bg-[#f8f2ee] rounded-lg text-[11px] space-y-1">
+              <div><strong class="text-[#6e5a52]">Penerima:</strong> <span id="modal-penerima">-</span></div>
+              <div><strong class="text-[#6e5a52]">No. WhatsApp:</strong> <span id="modal-phone">-</span></div>
+              <div><strong class="text-[#6e5a52]">Alamat:</strong> <span id="modal-alamat">-</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-[#ede7e3] py-8 text-center text-xs text-[#6e5a52]">
+    <p>© 2026 Ariq Fish Samudra Nusantara. Seluruh Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <!-- SCRIPT ENGINE UNTUK 24 JENIS IKAN & LIVE CHECKOUT -->
+  <script>
+    const fishCatalogData = [
+      { id: 'prod-1', name: 'Tuna Loin Grade A (Yellowfin)', category: 'Ikan Laut Pelagis', price: 95000, unit: 'kg', min: 5, tag: 'Best Seller', grade: 'Sashimi Grade • Air Blast -45°C', img: 'images/hero-fish-platter.png', desc: 'Daging tuna sirip kuning murni tanpa tulang & kulit. Pembekuan blast freezing menjaga warna merah ruby alami.' },
+      { id: 'prod-2', name: 'Ikan Cakalang Segar / Beku Kapal', category: 'Ikan Laut Pelagis', price: 38000, unit: 'kg', min: 10, tag: 'Populer Industri', grade: 'Tangkapan Kapal Pancing', img: 'images/news-1.png', desc: 'Tangkapan armada pancing Samudra Hindia. Cocok untuk industri pengalengan, abon, & fufu.' },
+      { id: 'prod-3', name: 'Ikan Tongkol Komo Segar', category: 'Ikan Laut Pelagis', price: 35000, unit: 'kg', min: 10, tag: 'Pasokan Harian', grade: 'Grade Horeka', img: 'images/news-3.png', desc: 'Ukuran seragam 3-4 ekor/kg, insang merah cerah, mata jernih cembung, daging padat kenyal.' },
+      { id: 'prod-4', name: 'Ikan Tenggiri Batang Segar', category: 'Ikan Laut Pelagis', price: 88000, unit: 'kg', min: 5, tag: 'Bahan Olahan', grade: 'Grade Super', img: 'images/hero-fish-platter.png', desc: 'Tenggiri batang berdaging kenyal dan berlemak gurih. Pilihan utama pengusaha pempek & siomay.' },
+      { id: 'prod-5', name: 'Ikan Kembung Banjar Segar', category: 'Ikan Laut Pelagis', price: 42000, unit: 'kg', min: 10, tag: 'Tinggi Omega-3', grade: 'Segar Pesisir', img: 'images/news-1.png', desc: 'Kembung banjar kualitas terbaik, ukuran 6-8 ekor/kg, kaya nutrisi dan asam lemak omega-3 alami.' },
+      { id: 'prod-6', name: 'Ikan Layang Biru Segar (Scad)', category: 'Ikan Laut Pelagis', price: 28000, unit: 'kg', min: 15, tag: 'Ekonomis', grade: 'Segar Laut Dalam', img: 'images/news-3.png', desc: 'Ikan layang segar untuk kebutuhan industri pengolahan ikan asin, pindang, dan konsumsi harian massal.' },
+      { id: 'prod-7', name: 'Ikan Lemuru Bali Segar / Beku', category: 'Ikan Laut Pelagis', price: 24000, unit: 'kg', min: 20, tag: 'Bahan Baku Industri', grade: 'Beku Kapal Selat Bali', img: 'images/about-fishermen.png', desc: 'Kadar minyak alami tinggi, diserap rutin oleh pabrik sarden, pakan akuakultur, dan minyak ikan.' },
+      { id: 'prod-8', name: 'Ikan Selar Kuning Segar', category: 'Ikan Laut Pelagis', price: 36000, unit: 'kg', min: 10, tag: 'Segar Pesisir', grade: 'Grade Horeka', img: 'images/news-1.png', desc: 'Ukuran 10-12 ekor/kg dengan garis kuning khas di tubuh, rasa gurih manis saat digoreng kering.' },
+      { id: 'prod-9', name: 'Ikan Marlin Hitam Loin', category: 'Ikan Laut Pelagis', price: 70000, unit: 'kg', min: 5, tag: 'Steak Cut', grade: 'Grade Restoran', img: 'images/hero-fish-platter.png', desc: 'Daging marlin padat menyerupai sirloin daging sapi, sangat lezat dipanggang steak atau sate ikan.' },
+      { id: 'prod-10', name: 'Kakap Merah Tangkapan Karang', category: 'Ikan Demersal / Karang', price: 85000, unit: 'kg', min: 5, tag: 'Favorit Restoran', grade: 'Segar Dingin 0°C', img: 'images/hero-fish-platter.png', desc: 'Kakap merah segar karang pilihan restoran bintang lima. Ukuran 800gr - 1.5kg per ekor utuh.' },
+      { id: 'prod-11', name: 'Kakap Putih / Barramundi', category: 'Ikan Demersal / Karang', price: 78000, unit: 'kg', min: 5, tag: 'Populer Seafood', grade: 'Segar Hidup / Dingin', img: 'images/about-fishermen.png', desc: 'Daging putih lembut tanpa duri halus, tekstur flake basah yang sangat disukai restoran western.' },
+      { id: 'prod-12', name: 'Kerapu Cantang Segar / Hidup', category: 'Ikan Demersal / Karang', price: 95000, unit: 'kg', min: 5, tag: 'Premium', grade: 'Grade Ekspor', img: 'images/hero-fish-platter.png', desc: 'Persilangan kerapu macan & kertang, daging kenyal gurih tinggi kolagen. Standar perjamuan restoran mewah.' },
+      { id: 'prod-13', name: 'Kerapu Macan Super', category: 'Ikan Demersal / Karang', price: 120000, unit: 'kg', min: 3, tag: 'Grade Ekspor', grade: 'Kualitas Kontes', img: 'images/hero-fish-platter.png', desc: 'Kerapu macan asli perairan karang timur Indonesia, tekstur super lembut dan manis alami saat dikukus tim.' },
+      { id: 'prod-14', name: 'Ikan Bawal Hitam Segar', category: 'Ikan Demersal / Karang', price: 65000, unit: 'kg', min: 5, tag: 'Segar Gurih', grade: 'Grade Horeka', img: 'images/news-3.png', desc: 'Bawal hitam tangkapan jaring laut dalam, ukuran 400gr - 800gr, daging tebal sangat cocok untuk bawal bakar.' },
+      { id: 'prod-15', name: 'Ikan Bawal Putih Super (Silver Pomfret)', category: 'Ikan Demersal / Karang', price: 175000, unit: 'kg', min: 2, tag: 'Paling Mewah', grade: 'Air-Flown Grade A', img: 'images/hero-fish-platter.png', desc: 'Bawal putih kualitas premium tanpa cacat sisik, rasa manis sangat lembut, primadona hari raya.' },
+      { id: 'prod-16', name: 'Ikan Baronang Angin / Tompel', category: 'Ikan Demersal / Karang', price: 58000, unit: 'kg', min: 5, tag: 'Spesialis Bakar', grade: 'Segar Pesisir', img: 'images/about-fishermen.png', desc: 'Baronang segar karang, daging gurih padat, hidangan legendaris restoran seafood pondok pantai.' },
+      { id: 'prod-17', name: 'Cumi-Cumi Sero Segar Bening', category: 'Cephalopoda & Crustacea', price: 75000, unit: 'kg', min: 5, tag: 'Bebas Kimia', grade: '100% Segar Alami', img: 'images/hero-fish-platter.png', desc: 'Cumi sero bening tanpa pengawet atau pemutih kimia. Tekstur kenyal garing dan manis alami.' },
+      { id: 'prod-18', name: 'Cumi Sotong / Bangka Segar', category: 'Cephalopoda & Crustacea', price: 80000, unit: 'kg', min: 5, tag: 'Daging Tebal', grade: 'Grade Restoran', img: 'images/news-1.png', desc: 'Sotong berdaging tebal putih padat, sangat ideal untuk cumi bakar saus madu, calamari, & bakso.' },
+      { id: 'prod-19', name: 'Udang Vaname Segar Laut (Size 30-40)', category: 'Cephalopoda & Crustacea', price: 85000, unit: 'kg', min: 5, tag: 'Favorit Horeka', grade: 'Segar Dingin', img: 'images/about-fishermen.png', desc: 'Udang vaname segar tambak laut pesisir, kulit berkilau kokoh, kepala utuh kuat tanpa bau lumpur.' },
+      { id: 'prod-20', name: 'Udang Windu Super (Tiger Prawn)', category: 'Cephalopoda & Crustacea', price: 140000, unit: 'kg', min: 3, tag: 'Jumbo Size', grade: 'Grade Ekspor (Size 15-20)', img: 'images/hero-fish-platter.png', desc: 'Udang windu jumbo bercorak loreng tegas, daging tebal padat renyah, standar menu grill hotel berbintang.' },
+      { id: 'prod-21', name: 'Kepiting Bakau Papua (Jantan Super)', category: 'Cephalopoda & Crustacea', price: 135000, unit: 'kg', min: 3, tag: 'Capit Padat', grade: 'Kondisi Hidup Terikat', img: 'images/news-3.png', desc: 'Kepiting bakau hidup asal Papua dengan capit super besar berisi daging padat manis gurih 100%.' },
+      { id: 'prod-22', name: 'Salmon Pasifik Fillet (Sashimi Cut)', category: 'Fillet & Olahan', price: 145000, unit: 'kg', min: 2, tag: 'Sashimi Ready', grade: 'Air-Flown Fresh', img: 'images/hero-fish-platter.png', desc: 'Potongan fillet salmon segar tanpa duri dan sisik, warna oranye cerah alami dengan marbling halus sehat.' },
+      { id: 'prod-23', name: 'Dori Fillet Putih (Pangasius Premium)', category: 'Fillet & Olahan', price: 45000, unit: 'kg', min: 5, tag: 'Bebas Bau Tanah', grade: 'Vacuum Packed', img: 'images/news-1.png', desc: 'Daging dori fillet putih bersih tanpa glazing berlebih, bebas bau lumpur, favorit untuk fish & chips.' },
+      { id: 'prod-24', name: 'Gindara Steak Fillet (Snow Fish)', category: 'Fillet & Olahan', price: 78000, unit: 'kg', min: 5, tag: 'Tinggi Minyak Ikan', grade: 'Steak Cut Beku', img: 'images/hero-fish-platter.png', desc: 'Gindara steak potongan rapi berkulit bersih, kaya omega alami, sangat lembut lumer di lidah.' }
+    ];
+
+    let cart = { 'prod-1': 5 };
+    let activeCat = 'Semua';
+    let searchQuery = '';
+
+    function renderGrid() {
+      const grid = document.getElementById('fish-grid');
+      if (!grid) return;
+
+      const filtered = fishCatalogData.filter(item => {
+        const matchCat = activeCat === 'Semua' || item.category === activeCat;
+        const matchSearch = searchQuery === '' || item.name.toLowerCase().includes(searchQuery.toLowerCase()) || item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchCat && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center bg-white rounded-xl border border-[#ede7e3] p-8">
+            <span class="material-symbols-outlined text-4xl text-[#707881] mb-2">search_off</span>
+            <h3 class="font-display font-semibold text-lg">Komoditas Tidak Ditemukan</h3>
+            <p class="text-xs text-[#6e5a52] mt-1">Coba gunakan kata kunci pencarian yang lain.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const qty = cart[item.id] || 0;
+        const isSelected = qty > 0;
+
+        return `
+          <div class="rounded-xl bg-white border ${isSelected ? 'border-[#00507d] ring-2 ring-[#00507d]/15 shadow-md' : 'border-[#ede7e3] shadow-sm hover:shadow-warm-lg hover:border-[#c5a059]'} p-4 flex flex-col justify-between transition-all group">
+            <div>
+              <div class="relative h-44 rounded-lg overflow-hidden bg-[#f8f2ee] mb-3">
+                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                <div class="absolute top-2 left-2 right-2 flex justify-between items-center">
+                  <span class="px-2 py-0.5 rounded bg-[#c5a059] text-[#1d1b19] font-bold text-[10px] uppercase shadow">${item.tag}</span>
+                  <span class="px-2 py-0.5 rounded bg-black/60 text-white font-mono text-[10px]">Min. ${item.min} ${item.unit}</span>
+                </div>
+                <span class="absolute bottom-2 left-2 text-[10px] text-white font-semibold bg-black/50 px-2 py-0.5 rounded">${item.grade}</span>
+              </div>
+
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#00507d] block">${item.category}</span>
+              <h3 class="font-display font-semibold text-base text-[#1d1b19] leading-snug mt-0.5 mb-1.5 group-hover:text-[#00507d] transition-colors">${item.name}</h3>
+              <p class="text-xs text-[#40474f] line-clamp-2 leading-relaxed mb-3">${item.desc}</p>
+
+              <div class="flex items-baseline gap-1 pt-2 border-t border-[#ede7e3]">
+                <span class="font-display font-bold text-lg text-[#00507d]">Rp ${item.price.toLocaleString('id-ID')}</span>
+                <span class="text-xs text-[#6e5a52]">/ ${item.unit}</span>
+              </div>
+            </div>
+
+            <div class="pt-3 mt-3 border-t border-[#ede7e3]">
+              ${qty === 0 ? `
+                <button type="button" onclick="updateQty('${item.id}', ${item.min})" class="w-full py-2.5 rounded-lg bg-[#00507d] hover:bg-[#0369a1] text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                  <span>Tambah ke Pesanan</span>
+                </button>
+              ` : `
+                <div class="flex items-center justify-between gap-2 bg-[#f8f2ee] p-1.5 rounded-lg border border-[#ede7e3]">
+                  <button type="button" onclick="updateQty('${item.id}', -1)" class="w-8 h-8 bg-white rounded font-bold text-sm text-[#1d1b19] shadow-sm flex items-center justify-center hover:bg-[#ede7e3]">-</button>
+                  <span class="font-display font-bold text-xs text-[#00507d]">${qty} ${item.unit} (Rp ${(qty * item.price).toLocaleString('id-ID')})</span>
+                  <button type="button" onclick="updateQty('${item.id}', 1)" class="w-8 h-8 bg-[#00507d] text-white rounded font-bold text-sm shadow-sm flex items-center justify-center hover:bg-[#0369a1]">+</button>
+                  <button type="button" onclick="deleteItem('${item.id}')" class="text-[#ba1a1a] p-1 hover:bg-[#ffdad6] rounded"><span class="material-symbols-outlined text-base">delete</span></button>
+                </div>
+              `}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterFish(cat) {
+      activeCat = cat;
+      const btns = document.querySelectorAll('#cat-filter-buttons .cat-btn');
+      btns.forEach(b => {
+        if (b.textContent.includes(cat) || (cat === 'Semua' && b.textContent.includes('Semua'))) {
+          b.className = 'cat-btn active px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#00507d] text-white shadow-sm whitespace-nowrap';
+        } else {
+          b.className = 'cat-btn px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#f8f2ee] text-[#6e5a52] hover:bg-[#ede7e3] whitespace-nowrap';
+        }
+      });
+      renderGrid();
+    }
+
+    function updateQty(id, delta) {
+      const cur = cart[id] || 0;
+      let next = cur + delta;
+      if (next <= 0) {
+        delete cart[id];
+      } else {
+        cart[id] = next;
+      }
+      renderGrid();
+      renderCart();
+    }
+
+    function deleteItem(id) {
+      delete cart[id];
+      renderGrid();
+      renderCart();
+    }
+
+    function renderCart() {
+      const itemsContainer = document.getElementById('preview-cart-items');
+      const totalKgBadge = document.getElementById('preview-total-kg-badge');
+      const summaryTotalKg = document.getElementById('summary-total-kg');
+      const summaryGrandTotal = document.getElementById('summary-grand-total');
+      const cartItemCount = document.getElementById('cart-item-count');
+
+      const selected = fishCatalogData.filter(item => (cart[item.id] || 0) > 0).map(item => ({
+        ...item,
+        qty: cart[item.id],
+        subtotal: cart[item.id] * item.price
+      }));
+
+      const totalKg = selected.reduce((acc, s) => acc + s.qty, 0);
+      const grandTotal = selected.reduce((acc, s) => acc + s.subtotal, 0);
+
+      if (totalKgBadge) totalKgBadge.textContent = totalKg + ' kg';
+      if (summaryTotalKg) summaryTotalKg.textContent = totalKg + ' kg';
+      if (summaryGrandTotal) summaryGrandTotal.textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
+      if (cartItemCount) cartItemCount.textContent = selected.length + ' komoditas dipilih';
+
+      if (!itemsContainer) return;
+
+      if (selected.length === 0) {
+        itemsContainer.innerHTML = '<p class="text-center py-6 text-[#707881]">Keranjang kosong. Pilih ikan dari katalog di sebelah kiri.</p>';
+      } else {
+        itemsContainer.innerHTML = selected.map(s => `
+          <div class="p-2.5 rounded-lg bg-[#f8f2ee] border border-[#ede7e3] flex justify-between items-center">
+            <div>
+              <strong class="block text-[#1d1b19] line-clamp-1">${s.name}</strong>
+              <span class="text-[#6e5a52] text-[11px]">${s.qty} kg × Rp ${s.price.toLocaleString('id-ID')}</span>
+            </div>
+            <div class="text-right">
+              <span class="font-bold text-[#00507d] block font-mono">Rp ${s.subtotal.toLocaleString('id-ID')}</span>
+              <button type="button" onclick="deleteItem('${s.id}')" class="text-[10px] text-[#ba1a1a] hover:underline">Hapus</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Search input listener
+    document.getElementById('search-fish-input')?.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderGrid();
+    });
+
+    // Form Checkout Submission
+    document.getElementById('standaloneCheckoutForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const selected = fishCatalogData.filter(item => (cart[item.id] || 0) > 0);
+      if (selected.length === 0) {
+        alert('Pilih minimal 1 jenis komoditas ikan terlebih dahulu!');
+        return;
+      }
+
+      const name = document.getElementById('checkout-name')?.value || 'Pelanggan Ariq Fish';
+      const phone = document.getElementById('checkout-phone')?.value || '081234567890';
+      const addr = document.getElementById('checkout-address')?.value || 'Jakarta';
+
+      const grandTotal = selected.reduce((acc, s) => acc + (cart[s.id] * s.price), 0);
+
+      // Populate Modal Details
+      document.getElementById('modal-qris-total').textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
+      document.getElementById('modal-penerima').textContent = name;
+      document.getElementById('modal-phone').textContent = phone;
+      document.getElementById('modal-alamat').textContent = addr;
+
+      const breakdown = document.getElementById('modal-items-breakdown');
+      breakdown.innerHTML = selected.map(s => `
+        <div class="py-2 flex justify-between">
+          <div>
+            <span class="font-semibold block">${s.name}</span>
+            <span class="text-[#6e5a52] text-[10px]">${cart[s.id]} kg × Rp ${s.price.toLocaleString('id-ID')}</span>
+          </div>
+          <span class="font-bold text-[#00507d]">Rp ${(cart[s.id] * s.price).toLocaleString('id-ID')}</span>
+        </div>
+      `).join('');
+
+      const waText = encodeURIComponent(
+        `Halo Admin Ariq Fish, saya telah membuat pesanan komoditas ikan:\n` +
+        selected.map(s => `- ${s.name}: ${cart[s.id]} kg`).join('\n') +
+        `\n\nTotal: Rp ${grandTotal.toLocaleString('id-ID')}\nNama: ${name}\nNo WA: ${phone}\nAlamat: ${addr}\n\nSaya ingin konfirmasi pembayaran QRIS.`
+      );
+      document.getElementById('modal-wa-btn').href = `https://wa.me/6285156256177?text=${waText}`;
+
+      // Open Modal
+      document.getElementById('modal-order-preview').classList.remove('hidden');
+    });
+
+    document.getElementById('close-order-btn')?.addEventListener('click', () => {
+      document.getElementById('modal-order-preview').classList.add('hidden');
+    });
+
+    // Initial render
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGrid();
+      renderCart();
+    });
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(() => {
+        renderGrid();
+        renderCart();
+      }, 50);
+    }
+  </script>
+</body>
+</html>

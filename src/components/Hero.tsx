@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export default function Hero() {
@@ -84,15 +85,15 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
-              <a
-                href="#kontak"
+              <Link
+                href="/pesan"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#00507d] text-white font-semibold text-sm hover:bg-[#0369a1] transition-all shadow-md group"
               >
-                <span>Penawaran Jual / Pasok Ikan</span>
+                <span>Beli &amp; Checkout Ikan (24 Jenis)</span>
                 <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
-                  arrow_forward
+                  shopping_cart_checkout
                 </span>
-              </a>
+              </Link>
               <a
                 href="#layanan"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#ede7e3] text-[#1d1b19] font-semibold text-sm hover:bg-[#e7e1dd] transition-colors shadow-sm"
@@ -100,7 +101,7 @@ export default function Hero() {
                 <span className="material-symbols-outlined text-base text-[#6e5a52]">
                   inventory_2
                 </span>
-                <span>Katalog Layanan &amp; Komoditas</span>
+                <span>Layanan &amp; Kemitraan</span>
               </a>
             </div>
 

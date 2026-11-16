@@ -46,8 +46,7 @@ export default function FishCatalogCheckoutPage() {
     "Semua",
     "Ikan Laut Pelagis",
     "Ikan Demersal / Karang",
-    "Cephalopoda",
-    "Crustacea",
+    "Cephalopoda & Crustacea",
     "Fillet & Olahan",
   ];
 
